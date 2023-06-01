@@ -1,0 +1,36 @@
+.nav-bar{
+    padding-left: 25px;
+    padding-right: 25px;
+    color: blue;
+    display: flexbox;
+    flex-direction: column;
+    width: 100px;
+    height: 100%;
+
+}
+
+.navoption{
+    cursor: pointer;
+    margin-top: 22px;
+    transition: .4s;
+}
+
+.optionimage{
+    width: 100px;
+    transition: .4s;
+}
+
+
+.contactcontainer{
+    margin-top: 100%;
+}
+
+.contact{
+    width: 100px;
+    transition: .4s;
+}
+
+.hovereffect:hover{
+    transform: scale(1.2) rotate(-5deg);
+    transition: .4s;
+}

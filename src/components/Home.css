@@ -1,0 +1,35 @@
+.home {
+    animation: circle 4s;
+}
+
+@keyframes circle {
+    0% {
+        clip-path: circle(0% at 0 0);
+    }
+
+    100% {
+        clip-path: circle(200% at 0 0);
+    }
+}
+
+.maurodraw {
+    width: 50%;
+    max-width: 500px;
+}
+
+.immauro {
+    width: 50%;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+.drawscontainer {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.letme {
+    width: 100%;
+    max-width: 1000px;
+}

@@ -1,0 +1,57 @@
+.skills{
+    animation: circle 4s;
+    /* animation: circleout 4s linear both; */
+}
+
+@keyframes circle {
+    0%{
+        clip-path: circle(0% at 0 0);
+    }
+
+    100%{
+        clip-path: circle(200% at 0 0);
+    }
+}
+
+@keyframes circleout {
+    0%{
+        clip-path: circle(200% at 100% 100%);
+    }
+
+    100%{
+        clip-path: circle(0% at 100% 100%);
+    }
+}
+
+
+.skillLogo{
+    width: 100px;
+}
+
+.skillsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.skillCard{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    margin: 3%;
+    transition: .3s;
+}
+
+.skillName{
+    opacity: 0%;
+    transition: .3s;
+}
+
+.skillCard:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    .skillName{
+        opacity: 100%;
+        transition: .3s;
+    }
+}
