@@ -44,6 +44,7 @@
 
 .skillName{
     opacity: 0%;
+    width: 100px;
     transition: .3s;
 }
 
@@ -54,4 +55,8 @@
         opacity: 100%;
         transition: .3s;
     }
+}
+
+.darkimage{
+    filter:drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.315))
 }

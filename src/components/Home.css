@@ -17,6 +17,8 @@
     max-width: 500px;
 }
 
+
+
 .immauro {
     width: 50%;
     max-width: 500px;
@@ -32,4 +34,10 @@
 .letme {
     width: 100%;
     max-width: 1000px;
+}
+
+
+
+.darkletter{
+    filter: drop-shadow(2px 2px 5px rgba(148, 147, 147, 0.233))  brightness(150%) saturate(244%);
 }

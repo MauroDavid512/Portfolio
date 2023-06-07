@@ -1,0 +1,86 @@
+
+.jello-vertical{animation:jello-vertical .9s linear both} @keyframes jello-vertical{0%{transform:  scale3d(1,1,1)}30%{transform:scale3d(.75,1.25,1)}40%{transform:scale3d(1.25,.75,1)}50%{transform:scale3d(.85,1.15,1)}65%{transform:scale3d(1.05,.95,1)}75%{transform:scale3d(.95,1.05,1)}100%{transform:scale3d(1,1,1)}}
+
+.shake-right{animation:shake-right 1s linear both} @keyframes shake-right{0%,100%{transform:rotate(0deg);transform-origin:100% 50%}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-4deg)}30%,50%,70%{transform:rotate(4deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
+
+.aboutcontainer{
+    display: flex;
+}
+
+.photocontainer{
+    position: relative;
+    margin-top: 15%;
+    margin-left: 10%;
+    background-color: aliceblue;
+}
+
+.dibumile{
+    position: absolute;
+    width: 600px;
+}
+
+.draw{
+    clip-path: circle(200% at 100% 100%);
+    transition: 2s;
+}
+
+.photocontainer:hover{
+    .draw{
+        clip-path: circle(0% at 100% 100%);
+        transition: 2s;
+    }
+}
+
+.abouttext{
+    position: relative;
+    margin-top: 40px ;
+    width: 30%;
+    left: 50%;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('../imgs/texturafotocopia.jpg');
+    padding: 3%;
+}
+
+@media (max-width: 1400px) {
+    .photocontainer{
+        
+        margin-top: 15%;
+        margin-left: none;
+    }
+    .abouttext{
+        left: 10%;
+        margin-top:700px;
+        width:70%;
+    }
+
+}
+
+.paragraph{
+    position: relative;
+}
+
+.grape{
+    position: absolute;
+    width: 100px;
+    left: -90px;
+    transform: rotate(30deg);
+}
+
+.grape:hover{
+    animation:shake-right 1s linear both
+}
+
+.ligalogo{
+    position: absolute;
+    width: 150px;
+    right: -100px;
+    transform: rotate(-10deg);
+}
+
+.ligalogo:hover{
+    animation:jello-vertical .9s linear both
+}
+
+
+

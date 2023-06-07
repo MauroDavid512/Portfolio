@@ -2,8 +2,9 @@
     padding-left: 25px;
     padding-right: 25px;
     color: blue;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100px;
     height: 100%;
 
@@ -33,4 +34,36 @@
 .hovereffect:hover{
     transform: scale(1.2) rotate(-5deg);
     transition: .4s;
+}
+
+.darkMode{
+    margin-top: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+
+.darkbuttoncontainer{
+    transition: .5s;
+}
+
+.darkbuttoncontainer:hover{
+    .darkMode:hover{
+        transform: scale(1.2)  rotateY(180deg);
+        transition: .5s;
+    }
+    transition: .5s;
+}
+
+.darkOn{
+    background-image: url("../imgs/texturacuadricula.png");
+    background-size: 200px;
+}
+
+.darkOff{
+    background-image: url("../imgs/texturapizarra.jpg");
 }

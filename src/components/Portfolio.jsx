@@ -5,16 +5,22 @@ import pokeapi from "../imgs/pokeapi.png"
 import reserva from "../imgs/reserva.png"
 import lmi from "../imgs/lmi.png"
 import veroport from "../imgs/veroport.png"
+import "./initanimation.css"
+import { useSelector } from "react-redux";
 
 
 function Portfolio() {
+
+    const darkMode = useSelector(state => state.darkMode)
 
     let content = [
         {
             title: "SPA Pokemon",
             link: "https://pokemonapimauro-psi.vercel.app/",
             image: pokeapi,
-            description: ""
+            description: {
+                en:"Simple Page App"
+            }
         },
         {
             title: "La Reserva",
@@ -37,18 +43,17 @@ function Portfolio() {
     ]
 
     return (
-        <div className="portfolio">
-            <img src={portfoliobutton} alt="" />
+        <div className="initanimation">
+            <img className={darkMode? "darkletter" : "lightletter"}  src={portfoliobutton} alt="" />
 
             <div className="cardcontainer">
                 {content.map(e => {
                     return (
 
                         <a className="card" target="_blank" href={e.link}>
-
                                 <img className="cardimg" src={e.image} alt={e.title} />
                                 <div className="cardtitle" >{e.title}</div>
-
+                                <div className="carddescription" >{e.description.en}</div>
                         </a>
                     )
                 })}

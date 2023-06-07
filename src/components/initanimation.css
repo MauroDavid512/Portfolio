@@ -1,0 +1,24 @@
+.initanimation{
+    animation: circle 4s;
+    /* animation: circleout 4s linear both; */
+}
+
+@keyframes circle {
+    0%{
+        clip-path: circle(0% at 0 0);
+    }
+
+    100%{
+        clip-path: circle(200% at 0 0);
+    }
+}
+
+@keyframes circleout {
+    0%{
+        clip-path: circle(200% at 100% 100%);
+    }
+
+    100%{
+        clip-path: circle(0% at 100% 100%);
+    }
+}
