@@ -23,6 +23,10 @@ import typescript from "../imgs/typescript.png"
 import typescriptword from "../imgs/typescriptword.png"
 import wordpress from "../imgs/wordpress.png"
 import wordpressword from "../imgs/wordpressword.png"
+import java from "../imgs/java.png"
+import javaword from "../imgs/javaword.png"
+import python from "../imgs/python.png"
+import pythonword from "../imgs/pythonword.png"
 import { useSelector } from "react-redux";
 
 
@@ -76,6 +80,14 @@ function Skills() {
         {
             logo: wordpress,
             name: wordpressword
+        },
+        {
+            logo: java,
+            name: javaword
+        },
+        {
+            logo: python,
+            name: pythonword
         }
     ]
 

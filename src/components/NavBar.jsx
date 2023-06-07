@@ -11,6 +11,8 @@ import logoin from "../imgs/logoin.png"
 import logogithub from "../imgs/logogithub.png"
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from '../redux/actions'
+import cvMauro from "../cv/englishCv.pdf"
+import downloadcv from "../imgs/downloadcv.png"
 
 
 
@@ -53,6 +55,7 @@ function NavBar() {
                 <div className="darkbuttoncontainer" onClick={handleMode}>
                     <div title={darkMode? "Disable dark mode" : "Dark Mode"} className={`darkMode ${mode.option}`}></div>
                 </div>
+                <a href={cvMauro} download="CV Mauro David"><img className={`contact downloacv ${mode.img}`} src={downloadcv} alt="" /></a>
             </div>
 
         </>

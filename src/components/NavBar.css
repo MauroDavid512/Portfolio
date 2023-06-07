@@ -1,3 +1,20 @@
+
+.downloacv:hover{
+    animation:slide-bottom 1s linear infinite;
+    transition: .5s
+}
+
+
+@keyframes slide-bottom{
+    0%{transform:translateY(0)}
+    10%{transform: translateY(1px);}
+    40%{transform: translateY(14px);}
+    50%{transform:translateY(15px)}
+    60%{transform: translateY(14px);}
+    90%{transform: translateY(1px);}
+    100%{transform: translateY(0);}
+}
+
 .nav-bar{
     padding-left: 25px;
     padding-right: 25px;
@@ -7,7 +24,8 @@
     align-items: center;
     width: 100px;
     height: 100%;
-
+    transform: scale(0.7);
+    margin-top: -120px;
 }
 
 .navoption{
