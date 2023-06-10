@@ -1,4 +1,7 @@
 
+.downloacv{
+    margin-top: 20px;
+}
 .downloacv:hover{
     animation:slide-bottom 1s linear infinite;
     transition: .5s
@@ -24,8 +27,8 @@
     align-items: center;
     width: 100px;
     height: 100%;
-    transform: scale(0.7);
-    margin-top: -120px;
+    transform: scale(0.9);
+    margin-top: -50px;
 }
 
 .navoption{
@@ -56,8 +59,8 @@
 
 .darkMode{
     margin-top: 50px;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     cursor: pointer;
     transition: .5s;
@@ -85,3 +88,54 @@
 .darkOff{
     background-image: url("../imgs/texturapizarra.jpg");
 }
+
+.langSelector{
+    position: relative;
+    display: grid;
+    clip-path: circle(50% at 50% 50%);
+    place-content: center;
+    margin-top: 15px;
+    background-image: url("../imgs/texturafotocopia.jpg");
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    transition: .4s;
+}
+
+
+
+.langs{
+    position: absolute;
+    display: grid;
+    place-content: center;
+    transition: .4s;
+    width: 80px;
+    height: 80px;
+    background-image: url("../imgs/texturafotocopia.jpg");
+    background-size: contain;
+    animation: slide-top 1s;
+}
+
+
+@keyframes slide-top{
+    0%{
+        transform:translateY(-100px);
+
+    }
+    80%{
+        transform:translateY(-5px);
+
+    }
+    100%{
+        transform:translateY(0);
+
+    }
+}
+
+
+
+
+

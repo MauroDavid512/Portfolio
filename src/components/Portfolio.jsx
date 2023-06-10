@@ -1,6 +1,7 @@
 import React from "react";
 import './Portfolio.css'
 import portfoliobutton from "../imgs/portfoliobutton.png"
+import portfoliobuttonES from "../imgs/portfoliobuttonES.png"
 import pokeapi from "../imgs/pokeapi.png"
 import reserva from "../imgs/reserva.png"
 import lmi from "../imgs/lmi.png"
@@ -11,6 +12,7 @@ import { useSelector } from "react-redux";
 
 function Portfolio() {
 
+    const lang = useSelector(state => state.lang)
     const darkMode = useSelector(state => state.darkMode)
 
     let content = [
@@ -44,7 +46,7 @@ function Portfolio() {
 
     return (
         <div className="initanimation">
-            <img className={darkMode? "darkletter" : "lightletter"}  src={portfoliobutton} alt="" />
+            <img className={darkMode? "darkletter" : "lightletter"}  src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" />
 
             <div className="cardcontainer">
                 {content.map(e => {

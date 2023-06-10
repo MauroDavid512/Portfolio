@@ -14,6 +14,7 @@
   border-right-width: 5px;
   border-right-color: rgba(196, 6, 95, 0.527);
   border-right-style: double;
+  z-index: 1;
 }
 
 

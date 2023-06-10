@@ -18,6 +18,10 @@ body {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -29,4 +33,16 @@ a:link {
 
 a:visited {
   text-decoration: none;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+  background-image: url("./imgs/texturacuadricula.png");
 }

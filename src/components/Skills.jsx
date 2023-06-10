@@ -1,5 +1,6 @@
 import React from "react";
 import skillsbutton from "../imgs/skillsbutton.png"
+import skillsbuttonES from "../imgs/skillsbuttonES.png"
 import "./Skills.css"
 import css from "../imgs/css.png"
 import cssword from "../imgs/cssword.png"
@@ -32,6 +33,7 @@ import { useSelector } from "react-redux";
 
 function Skills() {
 
+    const lang = useSelector(state => state.lang)
     const darkMode = useSelector(state => state.darkMode)
 
     const mode = darkMode? "darkletter" : "lightletter"
@@ -94,7 +96,7 @@ function Skills() {
 
     return (
         <div className="skills">
-            <img className={mode} src={skillsbutton} alt="" />
+            <img className={mode} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" />
             <br />
             <div className="skillsContainer">
             {skills.map(e => {
