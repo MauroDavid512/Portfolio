@@ -1,6 +1,7 @@
 import React from "react";
 import "./Experience.css"
 import experiencebutton from "../imgs/experiencebutton.png"
+import experiencebuttonES from "../imgs/experiencebuttonES.png"
 import ExperienceCard from "./ExperienceCard";
 import css from "../imgs/css.png"
 import express from "../imgs/express.png"
@@ -25,25 +26,32 @@ function Experience() {
 
     const darkMode = useSelector(state => state.darkMode)
 
+    const lang = useSelector(state => state.lang)
+
     const exp = [
         {
             title: "Pokemon SPA",
             date: "Aug-2022 Sep-2022",
+            dateES: "Ago-2022 Sep-2022",
             description: "Designed and developed a Pokemon app that included searches, filters, ordering, and creation. Extracted information from the Pokemon API and saved it in its database. Developed the app using React, Redux, pure CSS for the Front and Node.js with Express for the Back. Database in PostgreSQL and Sequelize.",
+            descriptionES: "Diseñé y desarrollé una aplicación de Pokémon que incluye búsquedas, filtros, ordenamiento y creación. Extrayendo información de la API de Pokémon y guardandola en su base de datos. Desarrollé la aplicación utilizando React, Redux, CSS puro para el Front y Node.js con Express para el Back. La base de datos está en PostgreSQL y Sequelize.",
             abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize],
             image: "",
             category: "fullstack",
             links: [
                 {
                     type: "Deploy",
+                    typeES: "Sitio",
                     link: "https://pokemonapimauro-psi.vercel.app/"
                 },
                 {
                     type: "Front Repository",
+                    typeES: "Respositorio de Front",
                     link: "https://github.com/MauroDavid512/pokemonPageFront"
                 },
                 {
                     type: "Back Repository",
+                    typeES: "Repositorio de Back",
                     link: "https://github.com/MauroDavid512/pokemonPageBack"
                 }
             ]
@@ -51,17 +59,21 @@ function Experience() {
         {
             title: "La Reserva",
             date: "Sep-2022 Oct-2022",
+            dateES: "Sep-2022 Oct-2022",
             description: "Designed and developed a sports complex app that included searches, filters, ordering, and the creation of tournaments organized by the administrator. It allows registration for registered users. It shows a table of positions and a table of scorers per tournament. Worked in a team using Git, GitHub, Trello, and Scrum methodology Developed the app using React, Redux, Tailwind for the Front and Node.js with Express for the Back. Database in PostgreSQL and Sequelize.",
+            descriptionES: "Diseñé y desarrollé una aplicación de complejo deportivo que incluía búsquedas, filtros, ordenamiento y la creación de torneos organizados por el administrador. Permite el registro para usuarios registrados. Muestra una tabla de posiciones y una tabla de goleadores por torneo. Trabajé en equipo utilizando Git, GitHub, Trello y la metodología Scrum. Desarrollé la aplicación utilizando React, Redux, Tailwind para el Front y Node.js con Express para el Back. La base de datos está en PostgreSQL y Sequelize.",
             abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize],
             image: "",
             category: "front",
             links: [
                 {
                     type: "Deploy",
+                    typeES: "Sitio",
                     link: "https://henry-lareserva-front.vercel.app/home"
                 },
                 {
                     type: "Respository",
+                    typeES: "Repositorio",
                     link: "https://github.com/CristianLarrauri/Henry-LaReserva"
                 }
             ]
@@ -69,21 +81,26 @@ function Experience() {
         {
             title: "Liga Mendocina de improvisación",
             date: "Oct-2022 Present",
-            description: 'Designed and developed the official website of the "Liga mendocina de improvisación" organization. Developed the app using React, Redux, CSS, HTML, and Node.js, Express.js, Sequelize, PostgreSQL. Created an independent ticket sales system. Created an admin profile capable of creating, modifying, and deleting any content on the page. Designed an interactive and informative site regarding the organization. (Deploy - Sample version, not yet completed. Admin code "liganeta2022")',
+            dateES: "Oct-2022 Actualidad",
+            description: 'Designed and developed the official website of the "Liga mendocina de improvisación" organization. Developed the app using React, Redux, CSS, HTML, and Node.js, Express.js, Sequelize, PostgreSQL. Created an independent ticket sales system. Created an admin profile capable of creating, modifying, and deleting any content on the page. Designed an interactive and informative site regarding the organization. (Sample version, not yet completed. Admin code "liganeta2022")',
+            descriptionES: 'Diseñé y desarrollé el sitio web oficial de la organización "Liga mendocina de improvisación". Desarrollé la aplicación utilizando React, Redux, CSS, HTML, Node.js, Express.js, Sequelize y PostgreSQL. Creé un sistema de venta de entradas independiente. Creé un perfil de administrador capaz de crear, modificar y eliminar cualquier contenido en la página. Diseñé un sitio interactivo e informativo relacionado con la organización. (Versión de muestra, aún no completada. Código de administrador: "liganeta2022")',
             abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize],
             image: "",
             category: "fullstack",
             links: [
                 {
                     type: "Deploy",
+                    typeES: "Sitio",
                     link: "https://lmi-frontt.vercel.app/lmi/home"
                 },
                 {
                     type: "Front Repository",
+                    typeES: "Repositorio de Front",
                     link: "https://github.com/MauroDavid512/LMIfrontt"
                 },
                 {
                     type: "Back Repository",
+                    typeES: "Respositorio de Back",
                     link: "https://github.com/MauroDavid512/LMIback"
                 }
 
@@ -92,24 +109,46 @@ function Experience() {
         {
             title: "NoCountry",
             date: "Mar-2023 present",
+            dateES: "Mar-2023 Actualidad",
             description: "Develop a database for a delivery application. Develop functionalities for orders, user account creation, restaurants, and their respective menus. Implement shopping cart functionality for orders",
+            descriptionES: "Desarrollé una base de datos para una aplicación de delivery. Realicé funcionalidades para pedidos, creación de cuentas de usuario, restaurantes y sus respectivos menús. Implementé la funcionalidad de carrito de compras para los pedidos.",
             abilities: [express, javascript, node, postgres, sequelize],
             image: "",
             category: "back",
             links: [
                 {
                     type: "Respository",
+                    typeES: "Respositorio",
                     link: "https://github.com/No-Country/c10-51-ft-reactchallenge"
                 }
             ]
         },
         {
             title: "Fóforo",
-            date: "Mar-2023",
-            description: "Develop and design digital portfolios for professionals of all kinds. Sell the service. Arrange meetings with different clients to agree on decisions and preferences regarding the product",
+            date: "Mar-2023 prenset",
+            dateES: "Mar-2023 Actualidad",
+            description: "Develop and design digital portfolios for professionals of all kinds. Sell the service. Arrange meetings with different clients to agree on decisions and preferences regarding the product.",
+            descriptionES: "Desarrollo y diseño portfolios digitales para profesionales de todo tipo. Realizo las ventas el servicio. Coordino reuniones con diferentes clientes para acordar decisiones y preferencias con respecto al producto.",
             abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize, typescript, wordpress, java, python],
             image: "",
             category: "fullstack"
+        },
+        {
+            title: "Verónica Calderón Portfolio",
+            date: "Mar-2023",
+            dateES: "Mar-2023",
+            description: "Design and create the portfolio for the actress Verónica Calderón. The web-site has a image's gallery with her professionals photos, her actoral reel and responsive design",
+            descriptionES: "Diseñé y creé el portfolio para la actriz Verónica Calderón. El sitio web cuenta con una galería de imágenes que muestra sus fotos profesionales, su reel actoral y un diseño responsive.",
+            abilities: [css, javascript, reactimg],
+            image: "",
+            category: "front",
+            links:[
+                {
+                    type: "Deploy",
+                    typeES: "Sitio",
+                    link: "https://verocalderon.vercel.app/"
+                }
+            ]
         }
     ]
 
@@ -126,21 +165,21 @@ function Experience() {
 
     return (
         <div className="initanimation">
-            <img className={darkMode? "darkletter" : "lightletter"} src={experiencebutton} alt="" />
+            <img className={darkMode? "darkletter" : "lightletter"} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" />
 
             <div className="selector">
                 {
                     [
                         {
-                            title: "FullStack Experience",
+                            title: lang == "EN" ? "FullStack Experience" : "Experiencia FullStack",
                             category: "fullstack"
                         },
                         {
-                            title: "Front-End Experience",
+                            title: lang == "EN" ? "Front-End Experience" : "Experiencia Front-End",
                             category: "front",
                         },
                         {
-                            title: "Back-End Experience",
+                            title: lang == "EN" ? "Back-End Experience" : "Experiencia Back-End",
                             category: "back"
                         }
                     ].map(e => {
@@ -157,7 +196,7 @@ function Experience() {
                 {fsExp.map(e => {
                     return (
                         <div className={`rotate${parseInt(fsExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={e.date} description={e.description} abilities={e.abilities} image={e.image} links={e.links} />
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
@@ -165,7 +204,7 @@ function Experience() {
                 {frontExp.map(e => {
                     return (
                         <div className={`rotate${parseInt(frontExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={e.date} description={e.description} abilities={e.abilities} image={e.image} links={e.links} />
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
@@ -173,7 +212,7 @@ function Experience() {
                 {backExp.map(e => {
                     return (
                         <div  className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={e.date} description={e.description} abilities={e.abilities} image={e.image} links={e.links} />
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}

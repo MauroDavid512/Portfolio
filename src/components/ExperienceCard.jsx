@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./ExperienceCard.css"
 
 function ExperienceCard(props) {
+
+    const lang = useSelector(state => state.lang)
 
     return (
         <div className="experienceCard">
@@ -22,7 +25,7 @@ function ExperienceCard(props) {
             <div className="linksContainer">
             {props.links?.map(e => {
                 return (
-                    <a target="_blank" href={e.link}><div className="linkbtn paperButton">{e.type}</div></a>
+                    <a target="_blank" href={e.link}><div className="linkbtn paperButton">{lang == "EN" ? e.type : e.typeES}</div></a>
                 )
             })}
             </div>
