@@ -4,47 +4,48 @@
 .shake-right{animation:shake-right 1s linear both} @keyframes shake-right{0%,100%{transform:rotate(0deg);transform-origin:100% 50%}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-4deg)}30%,50%,70%{transform:rotate(4deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
 
 .aboutcontainer{
-    display: flex;
+    padding-left: 150px;
+    padding-right: 170px;
 }
 
 .photocontainer{
     position: relative;
-    margin-top: 15%;
-    margin-left: 10%;
-    background-color: aliceblue;
+    width: 550px;
+    left:50%;
+    transform: translateX(-100%);
 }
 
 .dibumile{
     position: absolute;
-    width: 600px;
+    width: 100%;
 }
 
 .draw{
     clip-path: circle(200% at 100% 100%);
-    transition: 2s;
+    transition: 3s;
 }
 
-.photocontainer:hover{
-    .draw{
+.photocontainer:hover .draw{
         clip-path: circle(0% at 100% 100%);
-        transition: 2s;
+        transition: 2.5s;
     }
-}
+
 
 .abouttext{
-    position: relative;
-    margin-top: 40px ;
-    width: 30%;
-    left: 50%;
+    margin-top: 500px;
+    width: 100%;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     background-image: url('../imgs/texturafotocopia.jpg');
     padding: 3%;
 }
 
-@media (max-width: 1400px) {
+
+
+
+
+/* @media (max-width: 1400px) {
     .photocontainer{
-        
         margin-top: 15%;
         margin-left: none;
     }
@@ -54,7 +55,7 @@
         width:70%;
     }
 
-}
+} */
 
 .paragraph{
     position: relative;

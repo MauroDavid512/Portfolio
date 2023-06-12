@@ -29,20 +29,22 @@ function NavBar() {
 
     const dispatch = useDispatch()
 
-    const darkMode = useSelector(state => state.darkMode)
+    const {darkMode, lang} = useSelector(state => state)
 
-    const lang = useSelector(state => state.lang)
+    const [up, setUp] = useState("")
 
     const [langMenu, setLangMenu] = useState(false)
 
     const mode = darkMode ? {
         option: "darkOn",
         img: "darkimage",
-        letter: "darkletter"
+        letter: "darkletter",
+        line: ""
     } : {
         option: "darkOff",
         img: "",
-        letter: "lightletter"
+        letter: "lightletter",
+        line: "line"
     }
 
     const handleMode = () => {
@@ -52,20 +54,25 @@ function NavBar() {
 
     const handleLang = (str) => {
         if (str == lang) {
-            console.log(lang)
         } else {
             dispatch(actions.setLang(str))
-            console.log(lang)
         }
     }
 
     const handleLangMenu = (bool) => {
-        setLangMenu(bool)
+        if(bool){
+            setUp("")
+            setLangMenu(bool)
+        }else{
+            setUp("up")
+            setTimeout(() => {
+                setLangMenu(bool)
+            },1000)
+        }
     }
 
     return (
-        < >
-            <div className="nav-bar">
+            <div className={`nav-bar ${mode.line}`}>
                 <Link to='/'><div className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN"? homebutton : homebuttonES} alt="" /></div></Link>
                 <Link to='/about'><div className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN"? aboutmebutton : aboutmebuttonES} alt="" /></div></Link>
                 <Link to='/experience'><div className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN"? experiencebutton : experiencebuttonES} alt="" /></div></Link>
@@ -85,7 +92,7 @@ function NavBar() {
                         {lang == "EN" ? "Select language" : false}
                         {lang == "ES" ? "Cambiar idioma" : false}
                         {langMenu ?
-                            <div onMouseEnter={e => handleLangMenu(true)} className="langs">
+                            <div onMouseEnter={e => handleLangMenu(true)} className={`langs ${up}`}>
                                 <div onClick={e=> handleLang("EN")} className="paperButton">English</div>
                                 <div onClick={e=> handleLang("ES")} className="paperButton">Español</div>
                             </div>
@@ -93,10 +100,8 @@ function NavBar() {
 
                     </div>
                 </div>
-                <a href={cvMauro} download="CV Mauro David"><img className={`contact downloacv ${mode.img}`} title={lang == "EN"?"Dowload Resume":"Descargar CV"} src={downloadcv} alt="" /></a>
+                <a href={cvMauro} download="CV Mauro David"><img className={`contact downloadcv ${mode.img}`} title={lang == "EN"?"Dowload Resume":"Descargar CV"} src={downloadcv} alt="" /></a>
             </div>
-
-        </>
     );
 }
 

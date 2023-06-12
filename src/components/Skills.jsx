@@ -33,8 +33,7 @@ import { useSelector } from "react-redux";
 
 function Skills() {
 
-    const lang = useSelector(state => state.lang)
-    const darkMode = useSelector(state => state.darkMode)
+    const {darkMode, lang} = useSelector(state => state)
 
     const mode = darkMode? "darkletter" : "lightletter"
 

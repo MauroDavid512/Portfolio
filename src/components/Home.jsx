@@ -12,9 +12,7 @@ import letmeES from "../imgs/letmeES.png"
 
 function Home() {
 
-    const lang = useSelector(state => state.lang)
-
-    const darkMode = useSelector(state => state.darkMode)
+    const {darkMode, lang} = useSelector(state => state)
     const mode = darkMode? {
         letter: "darkletter"
     } : {

@@ -9,7 +9,6 @@
 }
 
 .line{
-  position:fixed;
   height: 100%;
   border-right-width: 5px;
   border-right-color: rgba(196, 6, 95, 0.527);

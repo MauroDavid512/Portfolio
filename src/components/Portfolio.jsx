@@ -12,8 +12,7 @@ import { useSelector } from "react-redux";
 
 function Portfolio() {
 
-    const lang = useSelector(state => state.lang)
-    const darkMode = useSelector(state => state.darkMode)
+    const {darkMode, lang} = useSelector(state => state)
 
     let content = [
         {

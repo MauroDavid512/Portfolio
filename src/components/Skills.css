@@ -51,10 +51,11 @@
 .skillCard:hover{
     transform: scale(1.1);
     transition: .3s;
-    .skillName{
-        opacity: 100%;
-        transition: .3s;
-    }
+}
+
+.skillCard:hover .skillName{
+    opacity: 100%;
+    transition: .3s;
 }
 
 .darkimage{

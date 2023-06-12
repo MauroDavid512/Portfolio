@@ -24,9 +24,7 @@ import backend from "../imgs/backend.png"
 
 function Experience() {
 
-    const darkMode = useSelector(state => state.darkMode)
-
-    const lang = useSelector(state => state.lang)
+    const {darkMode, lang} = useSelector(state => state)
 
     const exp = [
         {

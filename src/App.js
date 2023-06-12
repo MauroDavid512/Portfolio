@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import './App.css';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -12,7 +11,6 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
-  const darkMode = useSelector(state => state.darkMode)
   
 
 
@@ -20,8 +18,9 @@ function App() {
     <div>
     <div className="App">
       <NavBar />
+      {/* {darkMode?false : <div className='line'></div>} */}
       <div className='bigcontainer'>
-      {darkMode?false : <div className='line'></div>}
+      
       <div className='topspace'>
       <Routes>
         <Route exact path='/' element={<div><Home/></div>}/>
@@ -31,10 +30,11 @@ function App() {
         <Route path='/Skills' element={<div><Skills/></div>}/>
       </Routes>
       </div>
+      <div className='bottomspace'></div>
       </div>
       
     </div>
-    <div className='bottomspace'></div>
+    
     </div>
   );
 }
