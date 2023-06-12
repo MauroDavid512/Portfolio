@@ -205,7 +205,8 @@
         background-image: url("../imgs/texturafotocopia.jpg");
         position: fixed;
         z-index: 4;
-        opacity:100%
+        opacity:100%;
+        transform: rotate(8deg);
     }
 
     .closeBtn{

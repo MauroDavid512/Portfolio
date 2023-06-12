@@ -21,7 +21,7 @@ function Home() {
 
     return (
         <div className="home">
-            <img className={mode.letter} src={lang=="EN"? homebutton : homebuttonES} alt="" />
+            <img className={`imgtitle ${mode.letter}`} src={lang=="EN"? homebutton : homebuttonES} alt="" />
             <br />
             <div className="drawscontainer">
             <img className={`maurodraw ${mode.letter}`} src={maurodraw} alt="" />

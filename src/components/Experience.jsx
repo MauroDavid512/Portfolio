@@ -182,7 +182,7 @@ function Experience() {
 
     return (
         <div className="initanimation">
-            <img className={darkMode? "darkletter" : "lightletter"} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" />
+            <img className={`imgtitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" />
 
             <div className="selector">
                 {
@@ -246,6 +246,7 @@ function Experience() {
                     )
                 })}
             </div>
+            <div className="bottomspace"></div>
         </div>
     );
 }

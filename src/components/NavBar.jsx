@@ -28,6 +28,7 @@ import { useState } from "react";
 function NavBar() {
 
     let body = document.body
+    let html = document.querySelector('html')
 
     const dispatch = useDispatch()
 
@@ -59,6 +60,7 @@ function NavBar() {
     const handleLang = (str) => {
         if (str == lang) {
         } else {
+            html.setAttribute('lang', str.toLoweCase())
             dispatch(actions.setLang(str))
         }
     }
@@ -83,13 +85,18 @@ function NavBar() {
         <div>
             <img className="ham" onClick={e => handleOpenNav(true)} src={hamburguer} alt="" />
             <div className={`nav-bar ${mode.line} ${openNav ? "navOpen" : "navClose"}`}>
-                <img onClick={e => handleOpenNav(false)} className="closeBtn" src={close}
-                    alt="" />
+                <img onClick={e => handleOpenNav(false)} className="closeBtn" src={close} alt="" />
+
                 <Link to='/'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? homebutton : homebuttonES} alt="" /></div></Link>
+
                 <Link to='/about'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" /></div></Link>
+
                 <Link to='/experience'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" /></div></Link>
+
                 <Link to='/skills'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" /></div></Link>
+
                 <Link to='/portfolio'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" /></div></Link>
+
                 <div className="sticky">
                     <div className="contactcontainer">
                         <a href="mailto:mauroalos@hotmail.com"><img className={`contact hovereffect ${mode.img}`} title={lang == "EN" ? "Send mail" : "Enviar correo"} src={logooutlook} alt="" /></a>

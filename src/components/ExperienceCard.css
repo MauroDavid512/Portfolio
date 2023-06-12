@@ -46,4 +46,43 @@
     color: black;
 }
 
+@media (max-width: 900px){
+    .experienceCard{
+        font-size: 20px;
+    }
+    
+    .titleExp{
+        font-size: 25px;
+    }
+    
+    .littleIcon{
+        width: 40px;
+    }
+}
+
+@media (max-width: 640px){
+    .experienceCard{
+        font-size: 20px;
+    }
+    
+    .titleExp{
+        font-size: 25px;
+        justify-content:center;
+        flex-direction: column;
+    }
+
+    .date{
+        font-size: 20px;
+    }
+    
+    .littleIcon{
+        width: 40px;
+    }
+
+    .linksContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+}
 

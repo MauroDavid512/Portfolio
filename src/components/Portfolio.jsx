@@ -45,7 +45,7 @@ function Portfolio() {
 
     return (
         <div className="initanimation">
-            <img className={darkMode? "darkletter" : "lightletter"}  src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" />
+            <img className={`imgtitle ${darkMode ? "darkletter" : "lightletter"}`}  src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" />
 
             <div className="cardcontainer">
                 {content.map(e => {

@@ -95,7 +95,7 @@ function Skills() {
 
     return (
         <div className="skills">
-            <img className={mode} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" />
+            <img className={`imgtitle ${mode}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" />
             <br />
             <div className="skillsContainer">
             {skills.map(e => {

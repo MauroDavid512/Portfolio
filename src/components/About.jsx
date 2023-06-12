@@ -16,7 +16,7 @@ function About() {
 
     return (
         <div className="initanimation">
-            <img className={darkMode ? "darkletter" : "lightletter"} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" />
+            <img className={`imgtitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" />
             <br />
             <div className="photocontainer">
                 <img className="dibumile photo" src={fotomile} alt="" />
