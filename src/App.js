@@ -18,7 +18,7 @@ function App() {
     <div>
     <div className="App">
       <NavBar />
-      {/* {darkMode?false : <div className='line'></div>} */}
+      
       <div className='bigcontainer'>
       
       <div className='topspace'>

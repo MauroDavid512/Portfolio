@@ -84,7 +84,7 @@ function NavBar() {
     return (
         <div>
             <img className="ham" onClick={e => handleOpenNav(true)} src={hamburguer} alt="" />
-            <div className={`nav-bar ${mode.line} ${openNav ? "navOpen" : "navClose"}`}>
+            <div  className={`nav-bar ${mode.line} ${openNav ? "navOpen" : "navClose"}`}>
                 <img onClick={e => handleOpenNav(false)} className="closeBtn" src={close} alt="" />
 
                 <Link to='/'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? homebutton : homebuttonES} alt="" /></div></Link>
@@ -125,6 +125,7 @@ function NavBar() {
                     <a href={cvMauro} download="CV Mauro David"><img className={`downloadcv ${mode.img}`} title={lang == "EN" ? "Dowload Resume" : "Descargar CV"} src={downloadcv} alt="" /></a>
                 </div>
             </div>
+            {openNav ? <div  className="navBackground" onClick={e => handleOpenNav(false)}></div> : false}
         </div>
     );
 }
