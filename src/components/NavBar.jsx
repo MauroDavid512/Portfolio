@@ -114,8 +114,8 @@ function NavBar() {
                                 {lang == "ES" ? "Cambiar idioma" : false}
                                 {langMenu ?
                                     <div onMouseEnter={e => handleLangMenu(true)} className={`langs ${up}`}>
-                                        <div onClick={e => handleLang("EN")} className="paperButton">English</div>
-                                        <div onClick={e => handleLang("ES")} className="paperButton">Español</div>
+                                        <div onClick={e => handleLang("EN")} className="paperButton">{"English"}</div>
+                                        <div onClick={e => handleLang("ES")} className="paperButton">{"Español"}</div>
                                     </div>
                                     : false}
 
