@@ -23,8 +23,8 @@
 }
 
 .selector:hover{
-    bottom: -80px;
-    right: -20px;
+    bottom: -40px;
+    right: -10px;
     transition: .5s;
 }
 

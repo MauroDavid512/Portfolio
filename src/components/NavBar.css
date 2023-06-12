@@ -1,24 +1,45 @@
-
-.downloadcv{
+.downloadcv {
     margin-top: 20px;
+    width: 100px;
 }
-.downloadcv:hover{
-    animation:slide-bottom 1s linear infinite;
+
+.downloadcv:hover {
+    animation: slide-bottom 1s linear infinite;
     transition: .5s
 }
 
 
-@keyframes slide-bottom{
-    0%{transform:translateY(0)}
-    10%{transform: translateY(1px);}
-    40%{transform: translateY(14px);}
-    50%{transform:translateY(15px)}
-    60%{transform: translateY(14px);}
-    90%{transform: translateY(1px);}
-    100%{transform: translateY(0);}
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(0)
+    }
+
+    10% {
+        transform: translateY(1px);
+    }
+
+    40% {
+        transform: translateY(14px);
+    }
+
+    50% {
+        transform: translateY(15px)
+    }
+
+    60% {
+        transform: translateY(14px);
+    }
+
+    90% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.nav-bar{
+.nav-bar {
     padding-left: 25px;
     padding-right: 25px;
     color: blue;
@@ -26,43 +47,43 @@
     flex-direction: column;
     align-items: center;
     width: 100px;
-    height:inherit;
-
+    height: 100%;
 }
 
-.line{
+.line {
     border-right-width: 5px;
     border-right-color: rgba(196, 6, 95, 0.527);
     border-right-style: double;
 }
 
-.navoption{
+.navoption {
     cursor: pointer;
     margin-top: 22px;
     transition: .4s;
 }
 
-.optionimage{
+.optionimage {
     width: 100px;
     transition: .4s;
 }
 
 
-.contactcontainer{
-    margin-top: 100%;
+.contactcontainer {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact{
+.contact {
     width: 100px;
     transition: .4s;
 }
 
-.hovereffect:hover{
+.hovereffect:hover {
     transform: scale(1.2) rotate(-5deg);
     transition: .4s;
 }
 
-.darkMode{
+.darkMode {
     margin-top: 50px;
     width: 80px;
     height: 80px;
@@ -73,27 +94,27 @@
 
 
 
-.darkbuttoncontainer{
+.darkbuttoncontainer {
     transition: .5s;
 }
 
-.darkbuttoncontainer:hover .darkMode:hover{
-        transform: scale(1.2)  rotateY(180deg);
-        transition: .5s;
-    }
+.darkbuttoncontainer:hover .darkMode:hover {
+    transform: scale(1.2) rotateY(180deg);
+    transition: .5s;
+}
 
 
 
-.darkOn{
+.darkOn {
     background-image: url("../imgs/texturacuadricula.png");
     background-size: 200px;
 }
 
-.darkOff{
+.darkOff {
     background-image: url("../imgs/texturapizarra.jpg");
 }
 
-.langSelector{
+.langSelector {
     position: relative;
     display: grid;
     clip-path: circle(50% at 50% 50%);
@@ -111,7 +132,7 @@
 
 
 
-.langs{
+.langs {
     position: absolute;
     display: grid;
     place-content: center;
@@ -124,28 +145,130 @@
 }
 
 
-@keyframes slide-top{
-    0%{
-        transform:translateY(-100px);
+@keyframes slide-top {
+    0% {
+        transform: translateY(-100px);
 
     }
-    80%{
-        transform:translateY(-5px);
+
+    80% {
+        transform: translateY(-5px);
 
     }
-    100%{
-        transform:translateY(0);
+
+    100% {
+        transform: translateY(0);
 
     }
 }
 
-.up{
+.up {
     transform: translateY(-100px);
     transition: 1s;
 }
 
+.sticky {
+    position: sticky;
+    top: 40px;
+}
+
+.closeBtn, .ham{
+    position: fixed;
+    width: 1px;
+    opacity: 0;
+}
 
 
 
+@media (max-width: 400px) {
+    .nav-bar {
+        position: fixed;
+        background-image: url("../imgs/texturafotocopia.jpg");
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 140px;
+        height: 100%;
+        transition: 1s;
+        z-index: 5;
+    }
 
+    .line{
+        border-color: rgba(255, 255, 255, 0);
+    }
 
+    .ham{
+        width: 30px;
+        margin: 2%;
+        background-image: url("../imgs/texturafotocopia.jpg");
+        position: fixed;
+        z-index: 4;
+        opacity:100%
+    }
+
+    .closeBtn{
+        position: absolute;
+        width: 30px;
+        right: 0;
+        opacity:100%
+    }
+    .navOpen{
+        left: 0
+    }
+
+    .navClose{
+        left: -200px;
+    }
+
+    .optionimage {
+        width: 90px;
+    }
+
+    .contactcontainer {
+        margin-top: 10px;
+        flex-direction:row;
+    }
+
+    .contact {
+        width: 60px;
+        transition: .4s;
+    }
+
+    .specialbuttoncontainer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .darkMode {
+        margin-top: 0px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .langSelector {
+        position: relative;
+        display: grid;
+        clip-path: circle(50% at 50% 50%);
+        place-content: center;
+        margin-top: 0px;
+        background-image: url("../imgs/texturafotocopia.jpg");
+        background-size: contain;
+        width: 80px;
+        height: 80px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: black;
+        transition: .4s;
+    }
+
+    .downloadcv {
+        margin-top: 20px;
+        width: 120px;
+    }
+}

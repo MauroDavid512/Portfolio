@@ -12,29 +12,53 @@
     }
 }
 
+.drawscontainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 5%;
+}
+
 .maurodraw {
-    width: 50%;
+    width: 100%;
     max-width: 500px;
 }
 
 
 
 .immauro {
-    width: 50%;
-    max-width: 500px;
+    width: 100%;
     object-fit: contain;
-}
-
-.drawscontainer {
-    display: flex;
-    justify-content: center;
-    margin: 5%;
 }
 
 .letme {
     width: 100%;
     max-width: 1000px;
 }
+
+@media (min-width: 900px){
+    .drawscontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5%;
+    }
+    .maurodraw {
+        width: 50%;
+        max-width: 500px;
+    }
+    .immauro {
+        width: 50%;
+        max-width: 500px;
+        object-fit: contain;
+    }
+    .letme {
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+
+
 
 
 

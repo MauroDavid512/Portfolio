@@ -20,7 +20,7 @@ function ExperienceCard(props) {
             {props.image ? <img src={props.image} alt="" /> : false}
             {props.description}
             <br />
-            {props.abilities.map(e => <img className="littleIcon" src={e} alt="" />)}
+            {props.abilities?.map(e => <img className="littleIcon" src={e} alt="" />)}
             <br />
             <div className="linksContainer">
             {props.links?.map(e => {

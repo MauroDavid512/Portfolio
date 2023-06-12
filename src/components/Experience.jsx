@@ -20,6 +20,8 @@ import { useSelector } from "react-redux";
 import fullstack from "../imgs/fullstack.png"
 import frontend from "../imgs/frontend.png"
 import backend from "../imgs/backend.png"
+import noITimg from "../imgs/noIT.png"
+import noITES from "../imgs/noITES.png"
 
 
 function Experience() {
@@ -147,6 +149,22 @@ function Experience() {
                     link: "https://verocalderon.vercel.app/"
                 }
             ]
+        },
+        {
+            title: "Servicios Operativos S.R.L.",
+            date: "Feb-2015 Sep-2022",
+            dateES: "Feb-2015 Sep-2022",
+            description: 'I performed loading and unloading of trucks for the sugar mill "Ledesma." I assembled orders manually and using machines. I was promoted to a controller position, where my responsibilities included supervision, stock and quality control, and coordinating tasks with other employees.',
+            descriptionES: 'Realicé carga y descarga de camiones para la azucarera "Ledesma". Armado de pedidos manual y con maquinas. Ascendí a controlador, donde mis tareas fueron supervisión, control de stock y de calidad, coordinar las tareas con los demás empleados.',
+            category: "noIT"
+        },
+        {
+            title: "Tamarindo Ediciones",
+            date: "Jan-2015 Feb-2015",
+            dateES: "Ene-2015 Feb-2015",
+            description: 'I sold books from Billiken publishing company. I searched for customers and collected installment payments.',
+            descriptionES: 'Venta de libros de editorial Billiken. Búsqueda de clientes y cobro de las cuotas',
+            category: "noIT"
         }
     ]
 
@@ -158,6 +176,7 @@ function Experience() {
     const fsExp = expFilter("fullstack")
     const frontExp = expFilter("front")
     const backExp = expFilter("back")
+    const noIT = expFilter("noIT")
 
 
 
@@ -179,6 +198,10 @@ function Experience() {
                         {
                             title: lang == "EN" ? "Back-End Experience" : "Experiencia Back-End",
                             category: "back"
+                        },
+                        {
+                            title: lang == "EN" ? "No IT Experience" : "Experiencia no IT",
+                            category: "noIT"
                         }
                     ].map(e => {
                         return (
@@ -210,6 +233,14 @@ function Experience() {
                 {backExp.map(e => {
                     return (
                         <div  className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title))%2}`}>
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        </div>
+                    )
+                })}
+                <img id="noIT" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={lang == "EN" ? noITimg : noITES} alt="" />
+                {noIT.map(e => {
+                    return (
+                        <div  className={`rotate${parseInt(noIT.findIndex(ele => ele.title == e.title))%2}`}>
                         <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
