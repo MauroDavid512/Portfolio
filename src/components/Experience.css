@@ -34,8 +34,10 @@
     border-style:dashed;
     color: black;
     margin: 2px;
-    user-select: none;
+    
 }
+
+
 .paperButton:hover{
     border-color: black;
     cursor: pointer;

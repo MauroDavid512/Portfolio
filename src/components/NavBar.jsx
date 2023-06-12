@@ -60,7 +60,7 @@ function NavBar() {
     const handleLang = (str) => {
         if (str == lang) {
         } else {
-            html.setAttribute('lang', str.toLoweCase())
+            // html.setAttribute('lang', str.toLoweCase())
             dispatch(actions.setLang(str))
         }
     }
@@ -114,8 +114,8 @@ function NavBar() {
                                 {lang == "ES" ? "Cambiar idioma" : false}
                                 {langMenu ?
                                     <div onMouseEnter={e => handleLangMenu(true)} className={`langs ${up}`}>
-                                    <div onClick={e => handleLang("EN")} className="paperButton"><div className="noselect">English</div></div>
-                                    <div onClick={e => handleLang("ES")} className="paperButton"><div className="noselect">Español</div></div>
+                                        <div onClick={e => handleLang("EN")} className="paperButton">English</div>
+                                        <div onClick={e => handleLang("ES")} className="paperButton">Español</div>
                                     </div>
                                     : false}
 
