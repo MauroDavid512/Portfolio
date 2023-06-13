@@ -170,10 +170,7 @@
     transition: 1s;
 }
 
-.sticky {
-    position: sticky;
-    top: 40px;
-}
+
 
 .closeBtn, .ham{
     position: fixed;
