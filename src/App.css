@@ -16,6 +16,9 @@
   z-index: 1;
 }
 
+.noSelect{
+  user-select: none;
+}
 
 .topspace{
   margin-top:20px

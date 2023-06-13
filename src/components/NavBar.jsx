@@ -28,7 +28,7 @@ import { useState } from "react";
 function NavBar() {
 
     let body = document.body
-    let html = document.querySelector('html')
+    const screenWidth = window.innerWidth
 
     const dispatch = useDispatch()
 
@@ -40,13 +40,11 @@ function NavBar() {
 
     const [openNav, setOpenNav] = useState(false)
 
-    const mode = darkMode ? {
-        option: "darkOn",
+    const mode = darkMode && (screenWidth > 400) ? {
         img: "darkimage",
         letter: "darkletter",
         line: ""
     } : {
-        option: "darkOff",
         img: "",
         letter: "lightletter",
         line: "line"
@@ -54,6 +52,7 @@ function NavBar() {
 
     const handleMode = () => {
         dispatch(actions.darkMode())
+        console.log(screenWidth)
         darkMode ? body.className = "lightbackground" : body.className = "darkbackground"
     }
 
@@ -101,12 +100,12 @@ function NavBar() {
                     <div className="contactcontainer">
                         <a href="mailto:mauroalos@hotmail.com"><img className={`contact hovereffect ${mode.img}`} title={lang == "EN" ? "Send mail" : "Enviar correo"} src={logooutlook} alt="" /></a>
                         <Link target="_blank" to="https://www.linkedin.com/in/mauro-david-89432b193/"><img className={`contact hovereffect ${mode.img}`} title="LinkedIn" src={logoin} alt="" /></Link>
-                        <Link target="_blank" to="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode ? logogithubdark : logogithub} alt="" /></Link>
+                        <Link target="_blank" to="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode && (screenWidth > 400) ? logogithubdark : logogithub} alt="" /></Link>
                     </div>
                     <div className="specialbuttoncontainer">
                         <div className="darkbuttoncontainer" onClick={handleMode}>
-                            {lang == "EN" ? <div title={darkMode ? "Disable dark mode" : "Dark Mode"} className={`darkMode ${mode.option}`}></div> : false}
-                            {lang == "ES" ? <div title={darkMode ? "Desactivar modo oscuro" : "Modo oscuro"} className={`darkMode ${mode.option}`}></div> : false}
+                            {lang == "EN" ? <div title={darkMode ? "Disable dark mode" : "Dark Mode"} className={`darkMode ${darkMode? "darkOn" : "darkOff"}`}></div> : false}
+                            {lang == "ES" ? <div title={darkMode ? "Desactivar modo oscuro" : "Modo oscuro"} className={`darkMode ${darkMode? "darkOn" : "darkOff"}`}></div> : false}
                         </div>
                         <div>
                             <div className="langSelector" onMouseEnter={e => handleLangMenu(true)} onMouseLeave={e => handleLangMenu(false)}>
