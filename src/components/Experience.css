@@ -6,7 +6,7 @@
     margin:10px
 }
 
-.selector{
+.selectorContainer{
     position: fixed;
     bottom: -160px;
     right: -40px;
@@ -14,7 +14,7 @@
     background-image: url("../imgs/texturafotocopia.jpg");
     width: 200px;
     font-size: 20px;
-    height: 200px;
+    height: 300px;
     font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     box-shadow: -16px 16px 6px #00000085;
@@ -22,9 +22,9 @@
     transition: .5s;
 }
 
-.selector:hover{
-    bottom: -40px;
-    right: -10px;
+.selectorContainer:hover{
+    bottom: -30px;
+    right: -7.5px;
     transition: .5s;
 }
 
@@ -37,6 +37,10 @@
     
 }
 
+.selectExperience{
+    font-size: 30px;
+}
+
 
 .paperButton:hover{
     border-color: black;
@@ -44,8 +48,8 @@
 }
 
 @media (max-width: 400px){
-    .selector, .selector:hover{
-        position: fixed;
+
+    .selectorContainer{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -56,7 +60,7 @@
         background-image: url("../imgs/texturafotocopia.jpg");
         width: 100%;
         font-size: 17px;
-        height: 70px;
+        height: auto;
         font-family: 'Times New Roman', Times, serif;
         padding: 0px;
         padding-top: 5px;
@@ -65,7 +69,26 @@
         z-index: 2;
         transition: .5s;
     }
+
+    .hide{
+        transform: translateY(120px);
+    }
+
+    .closeSelector{
+        top:0;
+        position: fixed;
+        width: 100%; 
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.226);
+        z-index: 1;
+    }
+
     .bottomspace{
         height: 100px;
+    }.protector{
+        position: absolute;
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
     }
 }
