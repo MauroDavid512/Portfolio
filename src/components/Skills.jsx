@@ -28,6 +28,8 @@ import java from "../imgs/java.png"
 import javaword from "../imgs/javaword.png"
 import python from "../imgs/python.png"
 import pythonword from "../imgs/pythonword.png"
+import docker from "../imgs/docker.png"
+import dockerword from "../imgs/dockerword.png"
 import { useSelector } from "react-redux";
 
 
@@ -69,6 +71,10 @@ function Skills() {
         {
             logo: redux,
             name: reduxword
+        },
+        {
+            logo: docker,
+            name: dockerword
         },
         {
             logo: sequelize,

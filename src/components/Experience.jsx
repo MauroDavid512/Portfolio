@@ -16,22 +16,18 @@ import typescript from "../imgs/typescript.png"
 import wordpress from "../imgs/wordpress.png"
 import java from "../imgs/java.png"
 import python from "../imgs/python.png"
+import docker from "../imgs/docker.png"
 import { useSelector } from "react-redux";
 import fullstack from "../imgs/fullstack.png"
 import frontend from "../imgs/frontend.png"
 import backend from "../imgs/backend.png"
 import noITimg from "../imgs/noIT.png"
 import noITES from "../imgs/noITES.png"
-import { useState } from "react";
 
 
 function Experience() {
 
-    const { darkMode, lang } = useSelector(state => state)
-
-    let screenWidth = window.innerWidth
-
-    const [selectorOpen, setSelectorOpen] = useState(false)
+    const {darkMode, lang} = useSelector(state => state)
 
     const exp = [
         {
@@ -113,7 +109,7 @@ function Experience() {
         },
         {
             title: "NoCountry",
-            date: "Mar-2023 present",
+            date: "Mar-2023 Present",
             dateES: "Mar-2023 Actualidad",
             description: "Develop a database for a delivery application. Develop functionalities for orders, user account creation, restaurants, and their respective menus. Implement shopping cart functionality for orders",
             descriptionES: "Desarrollé una base de datos para una aplicación de delivery. Realicé funcionalidades para pedidos, creación de cuentas de usuario, restaurantes y sus respectivos menús. Implementé la funcionalidad de carrito de compras para los pedidos.",
@@ -130,7 +126,7 @@ function Experience() {
         },
         {
             title: "Fóforo",
-            date: "Mar-2023 present",
+            date: "Mar-2023 Prenset",
             dateES: "Mar-2023 Actualidad",
             description: "Develop and design digital portfolios for professionals of all kinds. Sell the service. Arrange meetings with different clients to agree on decisions and preferences regarding the product.",
             descriptionES: "Desarrollo y diseño portfolios digitales para profesionales de todo tipo. Realizo las ventas el servicio. Coordino reuniones con diferentes clientes para acordar decisiones y preferencias con respecto al producto.",
@@ -147,7 +143,7 @@ function Experience() {
             abilities: [css, javascript, reactimg],
             image: "",
             category: "front",
-            links: [
+            links:[
                 {
                     type: "Deploy",
                     typeES: "Sitio",
@@ -170,6 +166,22 @@ function Experience() {
             description: 'I sold books from Billiken publishing company. I searched for customers and collected installment payments.',
             descriptionES: 'Venta de libros de editorial Billiken. Búsqueda de clientes y cobro de las cuotas',
             category: "noIT"
+        },
+        {
+            title: "Xumek",
+            date: "Jun-2023 Present",
+            dateES: "Jun-2015 Actualidad",
+            description: 'Design, development, and deployment of the official website for the Xumek Association. Design of a system with a database that stores articles of journalistic and scientific nature on the site. It includes user registration and an administrative panel. Developed independently.',
+            descriptionES: 'Diseño, desarrollo y despliegue del sitio oficial de la asociación Xumek. Diseño de un sistema con base de datos que almacena articulos de índole periodistica y cientifica en el sitio. Cuenta con creación de usuario y panel administrativo. Desarrollo en solitario',
+            category: "fullstack",
+            abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize, docker],
+            links:[
+                {
+                    type: "Deploy",
+                    typeES: "Sitio",
+                    link: "http://xumek.org.ar/"
+                }
+            ]
         }
     ]
 
@@ -183,83 +195,70 @@ function Experience() {
     const backExp = expFilter("back")
     const noIT = expFilter("noIT")
 
-    const handleSelector = (bool) => {
-        setSelectorOpen(bool)
-    }
-
 
 
     return (
         <div className="initanimation">
             <img className={`imgtitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" />
-            {selectorOpen ? <div className="closeSelector" onClick={e => handleSelector(false)}></div> : false}
-            <div className={`selectorContainer ${!selectorOpen? "hide" : false}`}>
-                <div className="selectExperience">
-                    {lang == "EN" ? "Select experience" : "Elegir experiencia"}
-                </div>
-                <br />
-                {screenWidth < 400 && !selectorOpen ? <div className="protector" onClick={e => handleSelector(true)} ></div> : false}
-                <div className="selector">
 
-                    {
-                        [
-                            {
-                                title: lang == "EN" ? "FullStack Experience" : "Experiencia FullStack",
-                                category: "fullstack"
-                            },
-                            {
-                                title: lang == "EN" ? "Front-End Experience" : "Experiencia Front-End",
-                                category: "front",
-                            },
-                            {
-                                title: lang == "EN" ? "Back-End Experience" : "Experiencia Back-End",
-                                category: "back"
-                            },
-                            {
-                                title: lang == "EN" ? "No IT Experience" : "Experiencia no IT",
-                                category: "noIT"
-                            }
-                        ].map(e => {
-                            return (
-
-                                <a href={`#${e.category}`}><div className="paperButton" onClick={e => handleSelector(false)}>{e.title}</div></a>
-
-                            )
-                        })
-                    }
-
-                </div>
+            <div className="selector">
+                {
+                    [
+                        {
+                            title: lang == "EN" ? "FullStack Experience" : "Experiencia FullStack",
+                            category: "fullstack"
+                        },
+                        {
+                            title: lang == "EN" ? "Front-End Experience" : "Experiencia Front-End",
+                            category: "front",
+                        },
+                        {
+                            title: lang == "EN" ? "Back-End Experience" : "Experiencia Back-End",
+                            category: "back"
+                        },
+                        {
+                            title: lang == "EN" ? "No IT Experience" : "Experiencia no IT",
+                            category: "noIT"
+                        }
+                    ].map(e => {
+                        return (
+                            
+                            <a href={`#${e.category}`}><div className="paperButton">{e.title}</div></a>
+                            
+                        )
+                    })
+                }
             </div>
             <div className="experienceContainer">
-                <img id="fullstack" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={fullstack} alt="" />
+                <img id="fullstack" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={fullstack} alt="" />
                 {fsExp.map(e => {
                     return (
-                        <div className={`rotate${parseInt(fsExp.findIndex(ele => ele.title == e.title)) % 2}`}>
-                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(fsExp.findIndex(ele => ele.title == e.title))%2}`}>
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="front" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={frontend} alt="" />
+                <img id="front" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={frontend} alt="" />
                 {frontExp.map(e => {
                     return (
-                        <div className={`rotate${parseInt(frontExp.findIndex(ele => ele.title == e.title)) % 2}`}>
-                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(frontExp.findIndex(ele => ele.title == e.title))%2}`}>
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="back" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={backend} alt="" />
+                <img id="back" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={backend} alt="" />
                 {backExp.map(e => {
                     return (
-                        <div className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title)) % 2}`}>
-                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div  className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title))%2}`}>
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="noIT" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? noITimg : noITES} alt="" />
+                <img id="noIT" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={lang == "EN" ? noITimg : noITES} alt="" />
                 {noIT.map(e => {
                     return (
-                        <div className={`rotate${parseInt(noIT.findIndex(ele => ele.title == e.title)) % 2}`}>
-                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div  className={`rotate${parseInt(noIT.findIndex(ele => ele.title == e.title))%2}`}>
+                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}

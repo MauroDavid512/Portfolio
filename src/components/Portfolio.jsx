@@ -6,6 +6,7 @@ import pokeapi from "../imgs/pokeapi.png"
 import reserva from "../imgs/reserva.png"
 import lmi from "../imgs/lmi.png"
 import veroport from "../imgs/veroport.png"
+import xumek from "../imgs/xumek.png"
 import "./initanimation.css"
 import { useSelector } from "react-redux";
 
@@ -16,12 +17,15 @@ function Portfolio() {
 
     let content = [
         {
+            title: "Xumek - Derechos humanos",
+            link: "http://xumek.org.ar/",
+            image: xumek
+        },
+        {
             title: "SPA Pokemon",
             link: "https://pokemonapimauro-psi.vercel.app/",
             image: pokeapi,
-            description: {
-                en:"Simple Page App"
-            }
+            description: ""
         },
         {
             title: "La Reserva",
@@ -54,7 +58,7 @@ function Portfolio() {
                         <a className="card" target="_blank" href={e.link}>
                                 <img className="cardimg" src={e.image} alt={e.title} />
                                 <div className="cardtitle" >{e.title}</div>
-                                <div className="carddescription" >{e.description.en}</div>
+                                <div className="carddescription" >{e.description}</div>
                         </a>
                     )
                 })}
