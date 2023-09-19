@@ -88,13 +88,13 @@ function NavBar() {
 
                 <Link to='/'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? homebutton : homebuttonES} alt="" /></div></Link>
 
-                <Link to='/about'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" /></div></Link>
-
                 <Link to='/experience'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" /></div></Link>
 
                 <Link to='/skills'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" /></div></Link>
 
                 <Link to='/portfolio'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" /></div></Link>
+
+                <Link to='/about'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" /></div></Link>
 
                 <div className="sticky">
                     <div className="contactcontainer">
