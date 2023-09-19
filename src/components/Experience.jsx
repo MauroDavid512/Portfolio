@@ -183,7 +183,7 @@ function Experience() {
                 }
             ]
         }
-    ]
+    ].reverse()
 
     const expFilter = (category) => {
         let expFiltered = exp.filter(e => e.category == category)
