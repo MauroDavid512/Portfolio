@@ -180,7 +180,7 @@
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 1080px) {
     .nav-bar {
         position: fixed;
         background-image: url("../imgs/texturafotocopia.jpg");

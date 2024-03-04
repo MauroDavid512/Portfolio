@@ -1,0 +1,8 @@
+.showError{
+    width: 50%;
+    background-image: url("../imgs/texturafotocopia.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    font-size:50px;
+    display: flex;
+    flex-direction: column;
+}

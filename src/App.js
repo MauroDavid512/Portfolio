@@ -6,6 +6,7 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
+import ErrorPage from './components/ErrorPage';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/experience' element={<div><Experience/></div>}/>
         <Route path='/portfolio' element={<div><Portfolio/></div>}/>
         <Route path='/Skills' element={<div><Skills/></div>}/>
+        <Route path='/error' element={<div><ErrorPage/></div>}/>
       </Routes>
       </div>
       <div className='bottomspace'></div>

@@ -40,7 +40,7 @@ function NavBar() {
 
     const [openNav, setOpenNav] = useState(false)
 
-    const mode = darkMode && (screenWidth > 400) ? {
+    const mode = darkMode && (screenWidth > 1080) ? {
         img: "darkimage",
         letter: "darkletter",
         line: ""
@@ -98,9 +98,9 @@ function NavBar() {
 
                 <div className="sticky">
                     <div className="contactcontainer">
-                        <a href="mailto:mauroalos@hotmail.com"><img className={`contact hovereffect ${mode.img}`} title={lang == "EN" ? "Send mail" : "Enviar correo"} src={logooutlook} alt="" /></a>
+                        <a href="mailto:maurodaviddev@gmail.com"><img className={`contact hovereffect ${mode.img}`} title={lang == "EN" ? "Send mail" : "Enviar correo"} src={logooutlook} alt="" /></a>
                         <Link target="_blank" to="https://www.linkedin.com/in/mauro-david-89432b193/"><img className={`contact hovereffect ${mode.img}`} title="LinkedIn" src={logoin} alt="" /></Link>
-                        <Link target="_blank" to="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode && (screenWidth > 400) ? logogithubdark : logogithub} alt="" /></Link>
+                        <Link target="_blank" to="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode && (screenWidth > 1080) ? logogithubdark : logogithub} alt="" /></Link>
                     </div>
                     <div className="specialbuttoncontainer">
                         <div className="darkbuttoncontainer" onClick={handleMode}>
