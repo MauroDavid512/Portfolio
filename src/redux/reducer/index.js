@@ -1,6 +1,7 @@
 import {
     SET_LANG,
-    DARK_MODE
+    DARK_MODE,
+    SIRIUS_MODE
 } from '../actions'
 
 
