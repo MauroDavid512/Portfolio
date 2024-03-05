@@ -21,24 +21,24 @@ function Portfolio() {
             link: "http://xumek.org.ar/",
             image: xumek
         },
-        {
-            title: "SPA Pokemon",
-            link: "https://pokemonapimauro-psi.vercel.app/",
-            image: pokeapi,
-            description: ""
-        },
+        // {
+        //     title: "SPA Pokemon",
+        //     link: "https://pokemonapimauro-psi.vercel.app/",
+        //     image: pokeapi,
+        //     description: ""
+        // },
         {
             title: "La Reserva",
             link: "https://la-reserva.vercel.app/",
             image: reserva,
             description: ""
         },
-        {
-            title: "Liga Mendocina de improvisación",
-            link: "https://lmi-frontt.vercel.app/",
-            image: lmi,
-            description: ""
-        },
+        // {
+        //     title: "Liga Mendocina de improvisación",
+        //     link: "https://lmi-frontt.vercel.app/",
+        //     image: lmi,
+        //     description: ""
+        // },
         {
             title: "Vero Calderón Portfolio",
             link: "https://verocalderon.vercel.app/",

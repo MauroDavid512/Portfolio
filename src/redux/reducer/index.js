@@ -6,8 +6,8 @@ import {
 
 const initialState = {
     lang:"EN",
-    darkMode:false
-    
+    darkMode:false,
+    siriusMode:false
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -23,6 +23,11 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 darkMode: state.darkMode? false : true
+            }
+        case SIRIUS_MODE:
+            return {
+                ...state,
+                siriusMode: state.siriusMode? false : true
             }
 
         default: return state
