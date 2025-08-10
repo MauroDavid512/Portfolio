@@ -98,8 +98,8 @@ function Experience() {
         },
         {
             title: "NoCountry",
-            date: "Mar-2023 Present",
-            dateES: "Mar-2023 Actualidad",
+            date: "Mar-2023 Jun-2023",
+            dateES: "Mar-2023 Jun-2023",
             description: "Develop a database for a delivery application. Develop functionalities for orders, user account creation, restaurants, and their respective menus. Implement shopping cart functionality for orders",
             descriptionES: "Desarrollé una base de datos para una aplicación de delivery. Realicé funcionalidades para pedidos, creación de cuentas de usuario, restaurantes y sus respectivos menús. Implementé la funcionalidad de carrito de compras para los pedidos.",
             abilities: [express, javascript, node, postgres, sequelize],
