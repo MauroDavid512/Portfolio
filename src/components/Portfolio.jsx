@@ -2,11 +2,10 @@ import React from "react";
 import './Portfolio.css'
 import portfoliobutton from "../imgs/portfoliobutton.png"
 import portfoliobuttonES from "../imgs/portfoliobuttonES.png"
-import pokeapi from "../imgs/pokeapi.png"
 import reserva from "../imgs/reserva.png"
-import lmi from "../imgs/lmi.png"
 import veroport from "../imgs/veroport.png"
-import xumek from "../imgs/xumek.png"
+import svant from "../imgs/Portada Svant.png"
+import emotionall from "../imgs/emotionall web portada.png"
 import "./initanimation.css"
 import { useSelector } from "react-redux";
 
@@ -17,16 +16,17 @@ function Portfolio() {
 
     let content = [
         {
-            title: "Xumek - Derechos humanos",
-            link: "http://xumek.org.ar/",
-            image: xumek
+            title: "Svant",
+            link: "https://svant.us/",
+            image: svant,
+            description: "",
         },
-        // {
-        //     title: "SPA Pokemon",
-        //     link: "https://pokemonapimauro-psi.vercel.app/",
-        //     image: pokeapi,
-        //     description: ""
-        // },
+        {
+            title: "Emotionall WebSite",
+            link: "https://emotionall.co",
+            image: emotionall,
+            description: "",
+        },
         {
             title: "La Reserva",
             link: "https://la-reserva.vercel.app/",

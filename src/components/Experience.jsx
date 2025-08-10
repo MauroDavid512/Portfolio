@@ -27,34 +27,51 @@ import noITES from "../imgs/noITES.png"
 
 function Experience() {
 
-    const {darkMode, lang} = useSelector(state => state)
+    const { darkMode, lang } = useSelector(state => state)
 
     const exp = [
         {
-            title: "Pokemon SPA",
-            date: "Aug-2022 Sep-2022",
-            dateES: "Ago-2022 Sep-2022",
-            description: "Designed and developed a Pokemon app that included searches, filters, ordering, and creation. Extracted information from the Pokemon API and saved it in its database. Developed the app using React, Redux, pure CSS for the Front and Node.js with Express for the Back. Database in PostgreSQL and Sequelize.",
-            descriptionES: "Diseñé y desarrollé una aplicación de Pokémon que incluye búsquedas, filtros, ordenamiento y creación. Extrayendo información de la API de Pokémon y guardandola en su base de datos. Desarrollé la aplicación utilizando React, Redux, CSS puro para el Front y Node.js con Express para el Back. La base de datos está en PostgreSQL y Sequelize.",
-            abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize],
+            title: "Svant-lite",
+            date: "Sep-2024 Apr-2025",
+            dateES: "Sep-2024 Abr-2025",
+            description: "I co-developed the frontend of the Svant-lite web app, a streamlined version of Svant.",
+            descriptionES: "Desarrollé en colaboración el frontend de la AppWeb Svant-lite. Una versión minimizada de Svant.",
+            abilities: [css, typescript, javascript, java, postgres, reactimg, redux, figma],
             image: "",
-            category: "fullstack",
+            category: "front",
+        },
+        {
+            title: "Svant",
+            date: "Apr-2024 Present",
+            dateES: "Abr-2024 Actualidad",
+            description: "I co-developed the frontend of the Svant web app, fully built with React and global state management using Redux. Its styling was implemented with SCSS. The app displays real-time charts and calculates key data to support decision-making for oil companies.",
+            descriptionES: "Desarrollé en colaboración el frontEnd de la AppWeb Svant. La misma cuenta con su cuerpo desarrollado totalmente con React y manejo de estados globales con Redux. Su estilado está realizado con scss. Muestra gráficos en tiempo real y calcula datos importantes para la toma de decisiones de compañias petroleras.",
+            abilities: [css, typescript, javascript, java, postgres, reactimg, redux, figma],
+            image: "",
+            category: "front",
             links: [
                 {
                     type: "Deploy",
                     typeES: "Sitio",
-                    link: "https://pokemonapimauro-psi.vercel.app/"
+                    link: "https://svant.us/"
                 },
+            ]
+        },
+        {
+            title: "Emotionall",
+            date: "Apr-2024 Present",
+            dateES: "Abr-2024 Actualidad",
+            description: "I developed the promotional website for the Emotionall app, built in WordPress with Elementor. It features a blog where news and updates on mental health are regularly posted.",
+            descriptionES: "Desarrollé el sitio promocional de la app Emotionall. El mismo esta construido en WordPress con elementor. Cuenta con un Blog donde se suben periodicamente noticias y novedades respecto a la salud mental.",
+            abilities: [wordpress],
+            image: "",
+            category: "front",
+            links: [
                 {
-                    type: "Front Repository",
-                    typeES: "Respositorio de Front",
-                    link: "https://github.com/MauroDavid512/pokemonPageFront"
+                    type: "Deploy",
+                    typeES: "Sitio",
+                    link: "https://emotionall.co/"
                 },
-                {
-                    type: "Back Repository",
-                    typeES: "Repositorio de Back",
-                    link: "https://github.com/MauroDavid512/pokemonPageBack"
-                }
             ]
         },
         {
@@ -80,34 +97,6 @@ function Experience() {
             ]
         },
         {
-            title: "Liga Mendocina de improvisación",
-            date: "Oct-2022 Present",
-            dateES: "Oct-2022 Actualidad",
-            description: 'Designed and developed the official website of the "Liga mendocina de improvisación" organization. Developed the app using React, Redux, CSS, HTML, and Node.js, Express.js, Sequelize, PostgreSQL. Created an independent ticket sales system. Created an admin profile capable of creating, modifying, and deleting any content on the page. Designed an interactive and informative site regarding the organization. (Sample version, not yet completed. Admin code "liganeta2022")',
-            descriptionES: 'Diseñé y desarrollé el sitio web oficial de la organización "Liga mendocina de improvisación". Desarrollé la aplicación utilizando React, Redux, CSS, HTML, Node.js, Express.js, Sequelize y PostgreSQL. Creé un sistema de venta de entradas independiente. Creé un perfil de administrador capaz de crear, modificar y eliminar cualquier contenido en la página. Diseñé un sitio interactivo e informativo relacionado con la organización. (Versión de muestra, aún no completada. Código de administrador: "liganeta2022")',
-            abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize],
-            image: "",
-            category: "fullstack",
-            links: [
-                {
-                    type: "Deploy",
-                    typeES: "Sitio",
-                    link: "https://lmi-frontt.vercel.app/lmi/home"
-                },
-                {
-                    type: "Front Repository",
-                    typeES: "Repositorio de Front",
-                    link: "https://github.com/MauroDavid512/LMIfrontt"
-                },
-                {
-                    type: "Back Repository",
-                    typeES: "Respositorio de Back",
-                    link: "https://github.com/MauroDavid512/LMIback"
-                }
-
-            ]
-        },
-        {
             title: "NoCountry",
             date: "Mar-2023 Present",
             dateES: "Mar-2023 Actualidad",
@@ -125,16 +114,6 @@ function Experience() {
             ]
         },
         {
-            title: "Fóforo",
-            date: "Mar-2023 Prenset",
-            dateES: "Mar-2023 Actualidad",
-            description: "Develop and design digital portfolios for professionals of all kinds. Sell the service. Arrange meetings with different clients to agree on decisions and preferences regarding the product.",
-            descriptionES: "Desarrollo y diseño portfolios digitales para profesionales de todo tipo. Realizo las ventas el servicio. Coordino reuniones con diferentes clientes para acordar decisiones y preferencias con respecto al producto.",
-            abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize, typescript, wordpress, java, python],
-            image: "",
-            category: "fullstack"
-        },
-        {
             title: "Verónica Calderón Portfolio",
             date: "Mar-2023",
             dateES: "Mar-2023",
@@ -143,7 +122,7 @@ function Experience() {
             abilities: [css, javascript, reactimg],
             image: "",
             category: "front",
-            links:[
+            links: [
                 {
                     type: "Deploy",
                     typeES: "Sitio",
@@ -167,23 +146,7 @@ function Experience() {
             descriptionES: 'Venta de libros de editorial Billiken. Búsqueda de clientes y cobro de las cuotas',
             category: "noIT"
         },
-        {
-            title: "Xumek",
-            date: "Jun-2023 Present",
-            dateES: "Jun-2015 Actualidad",
-            description: 'Design, development, and deployment of the official website for the Xumek Association. Design of a system with a database that stores articles of journalistic and scientific nature on the site. It includes user registration and an administrative panel. Developed independently.',
-            descriptionES: 'Diseño, desarrollo y despliegue del sitio oficial de la asociación Xumek. Diseño de un sistema con base de datos que almacena articulos de índole periodistica y cientifica en el sitio. Cuenta con creación de usuario y panel administrativo. Desarrollo en solitario',
-            category: "fullstack",
-            abilities: [css, express, javascript, node, postgres, reactimg, redux, sequelize, docker],
-            links:[
-                {
-                    type: "Deploy",
-                    typeES: "Sitio",
-                    link: "http://xumek.org.ar/"
-                }
-            ]
-        }
-    ].reverse()
+    ]
 
     const expFilter = (category) => {
         let expFiltered = exp.filter(e => e.category == category)
@@ -195,8 +158,6 @@ function Experience() {
     const backExp = expFilter("back")
     const noIT = expFilter("noIT")
 
-
-
     return (
         <div className="initanimation">
             <img className={`imgtitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" />
@@ -204,10 +165,6 @@ function Experience() {
             <div className="selector">
                 {
                     [
-                        {
-                            title: lang == "EN" ? "FullStack Experience" : "Experiencia FullStack",
-                            category: "fullstack"
-                        },
                         {
                             title: lang == "EN" ? "Front-End Experience" : "Experiencia Front-End",
                             category: "front",
@@ -222,43 +179,43 @@ function Experience() {
                         }
                     ].map(e => {
                         return (
-                            
+
                             <a href={`#${e.category}`}><div className="paperButton">{e.title}</div></a>
-                            
+
                         )
                     })
                 }
             </div>
             <div className="experienceContainer">
-                <img id="fullstack" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={fullstack} alt="" />
+                {fsExp.length !== 0 ? <img id="fullstack" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={fullstack} alt="" /> : null}
                 {fsExp.map(e => {
                     return (
-                        <div className={`rotate${parseInt(fsExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(fsExp.findIndex(ele => ele.title == e.title)) % 2}`}>
+                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="front" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={frontend} alt="" />
+                <img id="front" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={frontend} alt="" />
                 {frontExp.map(e => {
                     return (
-                        <div className={`rotate${parseInt(frontExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(frontExp.findIndex(ele => ele.title == e.title)) % 2}`}>
+                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="back" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={backend} alt="" />
+                <img id="back" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={backend} alt="" />
                 {backExp.map(e => {
                     return (
-                        <div  className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(backExp.findIndex(ele => ele.title == e.title)) % 2}`}>
+                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
-                <img id="noIT" className={`categoryTitle ${darkMode? "darkletter" : "lightletter"}`} src={lang == "EN" ? noITimg : noITES} alt="" />
+                <img id="noIT" className={`categoryTitle ${darkMode ? "darkletter" : "lightletter"}`} src={lang == "EN" ? noITimg : noITES} alt="" />
                 {noIT.map(e => {
                     return (
-                        <div  className={`rotate${parseInt(noIT.findIndex(ele => ele.title == e.title))%2}`}>
-                        <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
+                        <div className={`rotate${parseInt(noIT.findIndex(ele => ele.title == e.title)) % 2}`}>
+                            <ExperienceCard title={e.title} date={lang == "EN" ? e.date : e.dateES} description={lang == "EN" ? e.description : e.descriptionES} abilities={e.abilities} image={e.image} links={e.links} />
                         </div>
                     )
                 })}
