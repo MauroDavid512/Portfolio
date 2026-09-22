@@ -4,7 +4,6 @@ import portfoliobutton from "../imgs/portfoliobutton.png";
 import portfoliobuttonES from "../imgs/portfoliobuttonES.png";
 import reserva from "../imgs/reserva.png";
 import edays from "../imgs/edays.png";
-import veroport from "../imgs/veroport.png";
 import svant from "../imgs/Portada Svant.png";
 import emotionall from "../imgs/emotionall web portada.png";
 import "./initanimation.css";
