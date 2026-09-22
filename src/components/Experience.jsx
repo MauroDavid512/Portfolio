@@ -15,7 +15,6 @@ import sequelize from "../imgs/sequelize.png";
 import typescript from "../imgs/typescript.png";
 import wordpress from "../imgs/wordpress.png";
 import java from "../imgs/java.png";
-import python from "../imgs/python.png";
 import docker from "../imgs/docker.png";
 import { useSelector } from "react-redux";
 import fullstack from "../imgs/fullstack.png";

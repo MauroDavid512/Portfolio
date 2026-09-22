@@ -22,7 +22,7 @@ function ExperienceCard(props) {
       <div className="linksContainer">
         {props.links?.map((e) => {
           return (
-            <a target="_blank" href={e.link}>
+            <a target="_blank" rel="noreferrer" href={e.link}>
               <div className="linkbtn paperButton">
                 {lang === "EN" ? e.type : e.typeES}
               </div>

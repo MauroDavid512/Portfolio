@@ -57,7 +57,7 @@ function Portfolio() {
       <div className="cardcontainer">
         {content.map((e) => {
           return (
-            <a className="card" target="_blank" href={e.link}>
+            <a className="card" target="_blank" rel="noreferrer" href={e.link}>
               <img className="cardimg" src={e.image} alt={e.title} />
               <div className="cardtitle">{e.title}</div>
               <div className="carddescription">{e.description}</div>

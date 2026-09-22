@@ -38,6 +38,7 @@ function Home() {
       <img
         className={`letme ${mode.letter}`}
         src={lang === "EN" ? letme : letmeES}
+        alt="language"
       />
     </div>
   );
