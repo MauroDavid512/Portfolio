@@ -1,88 +1,88 @@
 .contactSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 24px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+  box-sizing: border-box;
 }
 
 .contactPaper {
-    width: min(90%, 780px);
-    background-color: #f2eee5;
-    background-image: url("../imgs/texturafotocopia.jpg");
-    background-blend-mode: multiply;
-    padding: 32px;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-    transform: rotate(-1deg);
-    box-shadow: -16px 16px 6px #00000085;
+  width: min(90%, 780px);
+  background-color: #f2eee5;
+  background-image: url("../imgs/texturafotocopia.jpg");
+  background-blend-mode: multiply;
+  padding: 32px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  transform: rotate(-1deg);
+  box-shadow: -16px 16px 6px #00000085;
 }
 
 .contactPaper h2 {
-    margin: 0 0 24px;
-    font-size: 44px;
+  margin: 0 0 24px;
+  font-size: 44px;
 }
 
 .contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
 }
 
 .contactForm label {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 24px;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .contactForm input,
 .contactForm textarea {
-    width: 100%;
-    padding: 12px 14px;
-    box-sizing: border-box;
-    border: 4px dashed rgba(0, 0, 0, 0.397);
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    outline: none;
-    resize: vertical;
+  width: 100%;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 4px dashed rgba(0, 0, 0, 0.397);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  outline: none;
+  resize: vertical;
 }
 
 .contactForm input:focus,
 .contactForm textarea:focus {
-    border-color: black;
+  border-color: black;
 }
 
 .contactSubmit {
-    align-self: center;
-    background-color: rgba(255, 255, 255, 0.55);
-    font-size: 24px;
-    padding: 8px 18px;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.55);
+  font-size: 24px;
+  padding: 8px 18px;
 }
 
 @media (max-width: 640px) {
-    .contactPaper {
-        width: 100%;
-        padding: 24px 18px;
-    }
+  .contactPaper {
+    width: 100%;
+    padding: 24px 18px;
+  }
 
-    .contactPaper h2 {
-        font-size: 34px;
-    }
+  .contactPaper h2 {
+    font-size: 34px;
+  }
 
-    .contactForm label,
-    .contactSubmit {
-        font-size: 20px;
-    }
+  .contactForm label,
+  .contactSubmit {
+    font-size: 20px;
+  }
 
-    .contactForm input,
-    .contactForm textarea {
-        font-size: 18px;
-    }
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 18px;
+  }
 }

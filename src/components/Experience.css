@@ -1,86 +1,85 @@
-.categoryTitle{
-    width: 200px
+.categoryTitle {
+  width: 200px;
 }
 
-.experienceContainer{
-    margin:10px
+.experienceContainer {
+  margin: 10px;
 }
 
-.selector{
+.selector {
+  position: fixed;
+  bottom: -160px;
+  right: -40px;
+  transform: rotate(-20deg);
+  background-image: url("../imgs/texturafotocopia.jpg");
+  width: 200px;
+  font-size: 20px;
+  height: 200px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 20px;
+  box-shadow: -16px 16px 6px #00000085;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.selectorHidden {
+  bottom: -260px;
+  transition: 0.5s;
+}
+
+.selectorVisible:hover {
+  bottom: -40px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.paperButton {
+  border-width: 5px;
+  border-color: rgba(0, 0, 0, 0.397);
+  border-style: dashed;
+  color: black;
+  margin: 2px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.paperButton:hover {
+  border-color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .selector {
     position: fixed;
-    bottom: -160px;
-    right: -40px;
-    transform:rotate(-20deg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(0);
     background-image: url("../imgs/texturafotocopia.jpg");
-    width: 200px;
-    font-size: 20px;
-    height: 200px;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 20px;
+    width: 100%;
+    font-size: 17px;
+    height: 70px;
+    font-family: "Times New Roman", Times, serif;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     box-shadow: -16px 16px 6px #00000085;
     z-index: 2;
-    transition: .5s;
-}
+    transition: transform 0.5s ease-in-out;
+  }
 
-.selectorHidden{
-    bottom: -260px;
-    transition: .5s;
-}
+  .selectorHidden {
+    bottom: -70px;
+    transition: bottom 0.5s ease-in-out;
+  }
 
-.selectorVisible:hover{
-    bottom: -40px;
-    right: -10px;
-    transition: .5s;
-}
-
-.paperButton{
-    border-width: 5px;
-    border-color: rgba(0, 0, 0, 0.397);
-    border-style:dashed;
-    color: black;
-    margin: 2px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-.paperButton:hover{
-    border-color: black;
-    cursor: pointer;
-}
-
-@media (max-width: 400px){
-    .selector{
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transform:rotate(0);
-        background-image: url("../imgs/texturafotocopia.jpg");
-        width: 100%;
-        font-size: 17px;
-        height: 70px;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        box-shadow: -16px 16px 6px #00000085;
-        z-index: 2;
-        transition: transform .5s ease-in-out;
-    }
-
-    .selectorHidden{
-        bottom: -70px;
-        transition: bottom .5s ease-in-out;
-    }
-
-    .selectorVisible{
-        bottom: 0;
-        transition: bottom .5s ease-in-out;
-    }
-    .bottomspace{
-        height: 100px;
-    }
+  .selectorVisible {
+    bottom: 0;
+    transition: bottom 0.5s ease-in-out;
+  }
+  .bottomspace {
+    height: 100px;
+  }
 }

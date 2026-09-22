@@ -1,38 +1,33 @@
-import {
-    SET_LANG,
-    DARK_MODE,
-    SIRIUS_MODE
-} from '../actions'
-
+import { SET_LANG, DARK_MODE, SIRIUS_MODE } from "../actions";
 
 const initialState = {
-    lang:"EN",
-    darkMode:false,
-    siriusMode:false
-}
+  lang: "EN",
+  darkMode: false,
+  siriusMode: false,
+};
 
 const rootReducer = (state = initialState, action) => {
-    switch (action.type) {
+  switch (action.type) {
+    // Renderizado seleccionando opciones en Nav -------------------------------------
+    case SET_LANG:
+      return {
+        ...state,
+        lang: action.payload,
+      };
+    case DARK_MODE:
+      return {
+        ...state,
+        darkMode: state.darkMode ? false : true,
+      };
+    case SIRIUS_MODE:
+      return {
+        ...state,
+        siriusMode: state.siriusMode ? false : true,
+      };
 
-        // Renderizado seleccionando opciones en Nav -------------------------------------
-        case SET_LANG:
-            return {
-                ...state,
-                lang: action.payload
-            }
-        case DARK_MODE:
-            return {
-                ...state,
-                darkMode: state.darkMode? false : true
-            }
-        case SIRIUS_MODE:
-            return {
-                ...state,
-                siriusMode: state.siriusMode? false : true
-            }
+    default:
+      return state;
+  }
+};
 
-        default: return state
-    }
-}
-
-export default rootReducer
+export default rootReducer;

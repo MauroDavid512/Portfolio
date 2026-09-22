@@ -3,12 +3,12 @@
   display: flex;
 }
 
-.bigcontainer{
+.bigcontainer {
   width: 100%;
   left: 160px;
 }
 
-.line{
+.line {
   height: 100%;
   border-right-width: 5px;
   border-right-color: rgba(196, 6, 95, 0.527);
@@ -16,12 +16,12 @@
   z-index: 1;
 }
 
-.noSelect{
+.noSelect {
   user-select: none;
 }
 
-.topspace{
-  margin-top:20px
+.topspace {
+  margin-top: 20px;
 }
 
 .pageSection {
@@ -29,10 +29,6 @@
   scroll-margin-top: 20px;
 }
 
-.bottomspace{
+.bottomspace {
   height: 50px;
 }
-
-
-
-

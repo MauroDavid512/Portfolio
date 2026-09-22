@@ -1,88 +1,86 @@
+.experienceCard {
+  margin: 3%;
+  background-image: url(../imgs/texturafotocopia.jpg);
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  font-size: 25px;
+  width: 90%;
+}
 
-.experienceCard{
-    margin: 3%;
-    background-image: url(../imgs/texturafotocopia.jpg);
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
+.rotate0 {
+  transform: rotate(1deg);
+}
+
+.rotate1 {
+  transform: rotate(-1deg);
+}
+
+.titleExp {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+}
+
+.littleIcon {
+  width: 50px;
+  filter: saturate(0);
+  transition: 0.5s;
+}
+
+.littleIcon:hover {
+  filter: none;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.linkbtn {
+  padding: 3px;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .experienceCard {
+    font-size: 20px;
+  }
+
+  .titleExp {
     font-size: 25px;
-    width: 90%;
+  }
+
+  .littleIcon {
+    width: 40px;
+  }
 }
 
-.rotate0{
-    transform: rotate(1deg);
-}
+@media (max-width: 640px) {
+  .experienceCard {
+    font-size: 20px;
+  }
 
-.rotate1{
-    transform: rotate(-1deg);
-}
+  .titleExp {
+    font-size: 25px;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.titleExp{
-    font-size: 30px;
-    font-weight: bold;
+  .date {
+    font-size: 20px;
+  }
+
+  .littleIcon {
+    width: 40px;
+  }
+
+  .linksContainer {
     display: flex;
-    justify-content: space-around;
-}
-
-.littleIcon{
-    width: 50px;
-    filter: saturate(0);
-    transition: .5s;
-}
-
-.littleIcon:hover{
-    filter: none;
-    transform: scale(1.1);
-    transition: .5s;
-}
-
-.linksContainer{
-    display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     margin: 5px;
+  }
 }
-
-.linkbtn{
-    padding: 3px;
-    color: black;
-}
-
-@media (max-width: 900px){
-    .experienceCard{
-        font-size: 20px;
-    }
-    
-    .titleExp{
-        font-size: 25px;
-    }
-    
-    .littleIcon{
-        width: 40px;
-    }
-}
-
-@media (max-width: 640px){
-    .experienceCard{
-        font-size: 20px;
-    }
-    
-    .titleExp{
-        font-size: 25px;
-        justify-content:center;
-        flex-direction: column;
-    }
-
-    .date{
-        font-size: 20px;
-    }
-    
-    .littleIcon{
-        width: 40px;
-    }
-
-    .linksContainer{
-        display: flex;
-        flex-direction: column;
-        margin: 5px;
-    }
-}
-
