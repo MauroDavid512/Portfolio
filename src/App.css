@@ -24,10 +24,14 @@
   margin-top:20px
 }
 
+.pageSection {
+  min-height: 100vh;
+  scroll-margin-top: 20px;
+}
+
 .bottomspace{
   height: 50px;
 }
-
 
 
 

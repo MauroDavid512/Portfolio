@@ -103,6 +103,25 @@ function Skills() {
         <div className="skills">
             <img className={`imgtitle ${mode}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" />
             <br />
+            <div className="technologySummary">
+                {lang == "EN" ?
+                    <>
+                        <p><strong>Frontend:</strong> React, Next.js, TypeScript, JavaScript, Redux, Tailwind CSS, Sass, Astro, HTML, CSS, ECharts, ApexCharts.</p>
+                        <p><strong>Backend:</strong> Node.js, Express, PostgreSQL, SQL, Prisma, Sequelize, NextAuth/Auth.js, Strapi.</p>
+                        <p><strong>Tools:</strong> Vercel, Sentry, Google Analytics, Mailchimp, Figma, Docker, Git/GitHub, Azure, Poetry.</p>
+                        <p><strong>Mobile:</strong> React Native, Expo, Kotlin, Jetpack Compose, Hilt, Retrofit, Firebase, OneSignal.</p>
+                        <p><strong>AI:</strong> Codex and ChatGPT for research, debugging, refactoring and implementation assistance with human review.</p>
+                    </>
+                    :
+                    <>
+                        <p><strong>Frontend:</strong> React, Next.js, TypeScript, JavaScript, Redux, Tailwind CSS, Sass, Astro, HTML, CSS, ECharts, ApexCharts.</p>
+                        <p><strong>Backend:</strong> Node.js, Express, PostgreSQL, SQL, Prisma, Sequelize, NextAuth/Auth.js, Strapi.</p>
+                        <p><strong>Herramientas:</strong> Vercel, Sentry, Google Analytics, Mailchimp, Figma, Docker, Git/GitHub, Azure, Poetry.</p>
+                        <p><strong>Mobile:</strong> React Native, Expo, Kotlin, Jetpack Compose, Hilt, Retrofit, Firebase, OneSignal.</p>
+                        <p><strong>IA:</strong> Codex y ChatGPT para investigación, debugging, refactoring y asistencia de implementación con revisión humana.</p>
+                    </>
+                }
+            </div>
             <div className="skillsContainer">
             {skills.map(e => {
                 return (

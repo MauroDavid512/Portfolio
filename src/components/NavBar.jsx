@@ -1,6 +1,5 @@
 import React from "react";
 import './NavBar.css'
-import { Link } from "react-router-dom";
 import homebutton from "../imgs/homebutton.png"
 import aboutmebutton from "../imgs/aboutmebutton.png"
 import experiencebutton from "../imgs/experiencebutton.png"
@@ -17,7 +16,8 @@ import logogithub from "../imgs/logogithub.png"
 import logogithubdark from "../imgs/logogithubdarkmode.png"
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from '../redux/actions'
-import cvMauro from "../cv/englishCv.pdf"
+import cvMauroEN from "../cv/enCv.pdf"
+import cvMauroES from "../cv/esCv.pdf"
 import downloadcv from "../imgs/downloadcv.png"
 import hamburguer from "../imgs/hamburguer.png"
 import close from "../imgs/close.png"
@@ -80,27 +80,33 @@ function NavBar() {
         setOpenNav(bool)
     }
 
+    const handleNavClick = () => {
+        handleOpenNav(false)
+    }
+
     return (
         <div>
             <img className="ham" onClick={e => handleOpenNav(true)} src={hamburguer} alt="" />
             <div  className={`nav-bar ${mode.line} ${openNav ? "navOpen" : "navClose"}`}>
                 <img onClick={e => handleOpenNav(false)} className="closeBtn" src={close} alt="" />
 
-                <Link to='/'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? homebutton : homebuttonES} alt="" /></div></Link>
+                <a href="#home"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? homebutton : homebuttonES} alt="" /></div></a>
 
-                <Link to='/experience'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" /></div></Link>
+                <a href="#experience"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? experiencebutton : experiencebuttonES} alt="" /></div></a>
 
-                <Link to='/skills'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" /></div></Link>
+                <a href="#skills"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? skillsbutton : skillsbuttonES} alt="" /></div></a>
 
-                <Link to='/portfolio'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" /></div></Link>
+                <a href="#portfolio"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? portfoliobutton : portfoliobuttonES} alt="" /></div></a>
 
-                <Link to='/about'><div onClick={e => handleOpenNav(false)} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" /></div></Link>
+                <a href="#about"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage ${mode.letter}`} src={lang == "EN" ? aboutmebutton : aboutmebuttonES} alt="" /></div></a>
+
+                <a href="#contact"><div onClick={handleNavClick} className="navoption hovereffect"><img className={`optionimage navContactImage ${mode.img}`} title={lang === "EN" ? "Contact" : "Contacto"} src={logooutlook} alt="" /></div></a>
 
                 <div className="sticky">
                     <div className="contactcontainer">
                         <a href="mailto:maurodaviddev@gmail.com"><img className={`contact hovereffect ${mode.img}`} title={lang == "EN" ? "Send mail" : "Enviar correo"} src={logooutlook} alt="" /></a>
-                        <Link target="_blank" to="https://www.linkedin.com/in/mauro-david-89432b193/"><img className={`contact hovereffect ${mode.img}`} title="LinkedIn" src={logoin} alt="" /></Link>
-                        <Link target="_blank" to="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode && (screenWidth > 1080) ? logogithubdark : logogithub} alt="" /></Link>
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mauro-david-89432b193/"><img className={`contact hovereffect ${mode.img}`} title="LinkedIn" src={logoin} alt="" /></a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/MauroDavid512"><img className={`contact hovereffect ${mode.img}`} title="GitHub" src={darkMode && (screenWidth > 1080) ? logogithubdark : logogithub} alt="" /></a>
                     </div>
                     <div className="specialbuttoncontainer">
                         <div className="darkbuttoncontainer" onClick={handleMode}>
@@ -121,7 +127,7 @@ function NavBar() {
                             </div>
                         </div>
                     </div>
-                    <a href={cvMauro} download="CV Mauro David"><img className={`downloadcv ${mode.img}`} title={lang == "EN" ? "Dowload Resume" : "Descargar CV"} src={downloadcv} alt="" /></a>
+                    <a href={lang === "EN" ? cvMauroEN : cvMauroES} download="CV Mauro Alós"><img className={`downloadcv ${mode.img}`} title={lang == "EN" ? "Download Resume" : "Descargar CV"} src={downloadcv} alt="" /></a>
                 </div>
             </div>
             {openNav ? <div  className="navBackground" onClick={e => handleOpenNav(false)}></div> : false}

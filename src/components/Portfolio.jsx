@@ -16,22 +16,22 @@ function Portfolio() {
 
     let content = [
         {
-            title: "Svant",
+            title: "SVANT",
             link: "https://svant.us/",
             image: svant,
-            description: "",
+            description: "React, Redux, ECharts, ApexCharts, Sass and Sentry.",
         },
         {
-            title: "Emotionall WebSite",
+            title: "Emotionall",
             link: "https://emotionall.co",
             image: emotionall,
-            description: "",
+            description: "Web and mobile product development with React, Kotlin, Jetpack Compose, Firebase and OneSignal.",
         },
         {
             title: "La Reserva",
             link: "https://la-reserva.vercel.app/",
             image: reserva,
-            description: ""
+            description: "Full stack sports complex app built during Henry Bootcamp.",
         },
         // {
         //     title: "Liga Mendocina de improvisación",
@@ -43,7 +43,7 @@ function Portfolio() {
             title: "Vero Calderón Portfolio",
             link: "https://verocalderon.vercel.app/",
             image: veroport,
-            description: ""
+            description: "Responsive portfolio with gallery and actor reel.",
         }
     ]
 

@@ -22,7 +22,12 @@
     transition: .5s;
 }
 
-.selector:hover{
+.selectorHidden{
+    bottom: -260px;
+    transition: .5s;
+}
+
+.selectorVisible:hover{
     bottom: -40px;
     right: -10px;
     transition: .5s;
@@ -44,7 +49,7 @@
 }
 
 @media (max-width: 400px){
-    .selector, .selector:hover{
+    .selector{
         position: fixed;
         display: flex;
         flex-wrap: wrap;
@@ -63,7 +68,17 @@
         padding-bottom: 5px;
         box-shadow: -16px 16px 6px #00000085;
         z-index: 2;
-        transition: .5s;
+        transition: transform .5s ease-in-out;
+    }
+
+    .selectorHidden{
+        bottom: -70px;
+        transition: bottom .5s ease-in-out;
+    }
+
+    .selectorVisible{
+        bottom: 0;
+        transition: bottom .5s ease-in-out;
     }
     .bottomspace{
         height: 100px;

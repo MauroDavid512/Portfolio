@@ -6,9 +6,7 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
-import ErrorPage from './components/ErrorPage';
-
-import { Route, Routes } from 'react-router-dom';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -23,14 +21,24 @@ function App() {
       <div className='bigcontainer'>
       
       <div className='topspace'>
-      <Routes>
-        <Route exact path='/' element={<div><Home/></div>}/>
-        <Route path='/about' element={<div><About/></div>}/>
-        <Route path='/experience' element={<div><Experience/></div>}/>
-        <Route path='/portfolio' element={<div><Portfolio/></div>}/>
-        <Route path='/Skills' element={<div><Skills/></div>}/>
-        <Route path='/error' element={<div><ErrorPage/></div>}/>
-      </Routes>
+        <section id="home" className="pageSection">
+          <Home />
+        </section>
+        <section id="experience" className="pageSection">
+          <Experience />
+        </section>
+        <section id="skills" className="pageSection">
+          <Skills />
+        </section>
+        <section id="portfolio" className="pageSection">
+          <Portfolio />
+        </section>
+        <section id="about" className="pageSection">
+          <About />
+        </section>
+        <section id="contact" className="pageSection">
+          <Contact />
+        </section>
       </div>
       <div className='bottomspace'></div>
       </div>

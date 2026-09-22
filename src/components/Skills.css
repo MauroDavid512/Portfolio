@@ -34,6 +34,23 @@
     justify-content: center
 }
 
+.technologySummary {
+    width: min(90%, 1100px);
+    margin: 0 auto 40px;
+    padding: 20px 28px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f2eee5;
+    background-image: url('../imgs/texturafotocopia.jpg');
+    background-blend-mode: multiply;
+}
+
+.technologySummary p {
+    margin: 8px 0;
+}
+
 .skillCard{
     display: flex;
     flex-direction: column;
