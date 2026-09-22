@@ -3,6 +3,7 @@ import "./Portfolio.css";
 import portfoliobutton from "../imgs/portfoliobutton.png";
 import portfoliobuttonES from "../imgs/portfoliobuttonES.png";
 import reserva from "../imgs/reserva.png";
+import edays from "../imgs/edays.png";
 import veroport from "../imgs/veroport.png";
 import svant from "../imgs/Portada Svant.png";
 import emotionall from "../imgs/emotionall web portada.png";
@@ -18,6 +19,12 @@ function Portfolio() {
       link: "https://svant.us/",
       image: svant,
       description: "React, Redux, ECharts, ApexCharts, Sass and Sentry.",
+    },
+    {
+      title: "E-days",
+      link: "https://www.edays.com.ar/",
+      image: edays,
+      description: "E-days LandingPage with Astro.",
     },
     {
       title: "Emotionall",
@@ -38,12 +45,6 @@ function Portfolio() {
     //     image: lmi,
     //     description: ""
     // },
-    {
-      title: "Vero Calderón Portfolio",
-      link: "https://verocalderon.vercel.app/",
-      image: veroport,
-      description: "Responsive portfolio with gallery and actor reel.",
-    },
   ];
 
   return (
