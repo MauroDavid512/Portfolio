@@ -1,5 +1,6 @@
 .contactSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -23,6 +24,19 @@
 .contactPaper h2 {
   margin: 0 0 24px;
   font-size: 44px;
+}
+
+.contactSocials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin: 0 0 48px;
+}
+
+.contactSocialIcon {
+  width: 110px;
+  transition: 0.4s;
 }
 
 .contactForm {
@@ -74,6 +88,14 @@
 
   .contactPaper h2 {
     font-size: 34px;
+  }
+
+  .contactSocials {
+    gap: 24px;
+  }
+
+  .contactSocialIcon {
+    width: 78px;
   }
 
   .contactForm label,

@@ -152,9 +152,7 @@ function About() {
             </div>
             <br />
             <div className="paragraph">
-              <img className="ligalogo" src={ligalogo} alt="" />I enjoy doing
-              theater. I'm a member of the Mendoza Improvisation League. The
-              cast for which I created their official website. Adoro hacer
+              <img className="ligalogo" src={ligalogo} alt="" />Adoro hacer
               teatro. Soy miembro de la Liga Mendocina de Improvisación. Elenco
               del cual he creado su sitio oficial (Podés verlo en este
               portafolio).

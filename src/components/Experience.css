@@ -44,7 +44,7 @@
 
 .paperButton:hover {
   border-color: black;
-  cursor: pointer;
+  cursor: inherit;
 }
 
 @media (max-width: 400px) {

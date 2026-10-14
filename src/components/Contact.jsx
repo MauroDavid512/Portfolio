@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./Contact.css";
+import gmail from "../imgs/gmail.png";
+import logoin from "../imgs/logoin.png";
+import logogithub from "../imgs/logogithub.png";
+import logogithubdark from "../imgs/logogithubdarkmode.png";
 
 function Contact() {
-  const { lang } = useSelector((state) => state);
+  const { darkMode, lang } = useSelector((state) => state);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +34,40 @@ function Contact() {
 
   return (
     <div className="contactSection">
+      <div className="contactSocials">
+        <a href="mailto:maurodaviddev@gmail.com">
+          <img
+            className={`contactSocialIcon hovereffect ${darkMode ? "darkimage" : ""}`}
+            title={lang === "EN" ? "Send mail" : "Enviar correo"}
+            src={gmail}
+            alt=""
+          />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/mauro-david-89432b193/"
+        >
+          <img
+            className={`contactSocialIcon hovereffect ${darkMode ? "darkimage" : ""}`}
+            title="LinkedIn"
+            src={logoin}
+            alt=""
+          />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/MauroDavid512"
+        >
+          <img
+            className={`contactSocialIcon hovereffect`}
+            title="GitHub"
+            src={darkMode ? logogithubdark : logogithub}
+            alt=""
+          />
+        </a>
+      </div>
       <div className="contactPaper">
         <h2>{lang === "EN" ? "Contact" : "Contacto"}</h2>
         <form className="contactForm" onSubmit={handleSubmit}>

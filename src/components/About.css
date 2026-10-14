@@ -91,7 +91,7 @@
 
 .draw {
   clip-path: circle(200% at 100% 100%);
-  cursor: grab;
+  cursor: url("../imgs/cursors/pointer.png") 3 5, grab;
   touch-action: none;
   user-select: none;
   transform-origin: 50% 100%;
@@ -102,9 +102,17 @@
 }
 
 .stickerDragging {
-  cursor: grabbing;
+  cursor: url("../imgs/cursors/pointer-click.png") 3 5, grabbing;
   transition: none;
   filter: drop-shadow(12px 18px 8px rgba(0, 0, 0, 0.28));
+}
+
+.darkbackground .draw {
+  cursor: url("../imgs/cursors/pointer-dark.png") 3 5, grab;
+}
+
+.darkbackground .stickerDragging {
+  cursor: url("../imgs/cursors/pointer-click-dark.png") 3 5, grabbing;
 }
 
 .abouttext {

@@ -5,6 +5,7 @@
 
 .bigcontainer {
   width: 100%;
+  margin-left: 155px;
   left: 160px;
 }
 
@@ -31,4 +32,10 @@
 
 .bottomspace {
   height: 50px;
+}
+
+@media (max-width: 1080px) {
+  .bigcontainer {
+    margin-left: 0;
+  }
 }

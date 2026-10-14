@@ -5,15 +5,13 @@ import aboutmebutton from "../imgs/aboutmebutton.png";
 import experiencebutton from "../imgs/experiencebutton.png";
 import portfoliobutton from "../imgs/portfoliobutton.png";
 import skillsbutton from "../imgs/skillsbutton.png";
+import contact from "../imgs/contactbutton.png"
+import contactES from "../imgs/contactbuttonES.png"
 import homebuttonES from "../imgs/homebuttonES.png";
 import aboutmebuttonES from "../imgs/aboutmebuttonES.png";
 import experiencebuttonES from "../imgs/experiencebuttonES.png";
 import portfoliobuttonES from "../imgs/portfoliobuttonES.png";
 import skillsbuttonES from "../imgs/skillsbuttonES.png";
-import logooutlook from "../imgs/logooutlook.png";
-import logoin from "../imgs/logoin.png";
-import logogithub from "../imgs/logogithub.png";
-import logogithubdark from "../imgs/logogithubdarkmode.png";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../redux/actions";
 import cvMauroEN from "../cv/enCv.pdf";
@@ -157,51 +155,14 @@ function NavBar() {
         <a href="#contact">
           <div onClick={handleNavClick} className="navoption hovereffect">
             <img
-              className={`optionimage navContactImage ${mode.img}`}
-              title={lang === "EN" ? "Contact" : "Contacto"}
-              src={logooutlook}
+              className={`optionimage ${mode.letter}`}
+              src={lang === "EN" ? contact : contactES}
               alt=""
             />
           </div>
         </a>
 
-        <div className="sticky">
-          <div className="contactcontainer">
-            <a href="mailto:maurodaviddev@gmail.com">
-              <img
-                className={`contact hovereffect ${mode.img}`}
-                title={lang === "EN" ? "Send mail" : "Enviar correo"}
-                src={logooutlook}
-                alt=""
-              />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/mauro-david-89432b193/"
-            >
-              <img
-                className={`contact hovereffect ${mode.img}`}
-                title="LinkedIn"
-                src={logoin}
-                alt=""
-              />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/MauroDavid512"
-            >
-              <img
-                className={`contact hovereffect ${mode.img}`}
-                title="GitHub"
-                src={
-                  darkMode && screenWidth > 1080 ? logogithubdark : logogithub
-                }
-                alt=""
-              />
-            </a>
-          </div>
+        <div className="navActions">
           <div className="specialbuttoncontainer">
             <div className="darkbuttoncontainer" onClick={handleMode}>
               {lang === "EN" ? (

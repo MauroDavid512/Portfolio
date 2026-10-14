@@ -19,6 +19,135 @@ body {
 
 html {
   scroll-behavior: smooth;
+  cursor: url("./imgs/cursors/default.png") 4 4, auto;
+}
+
+body,
+body * {
+  cursor: url("./imgs/cursors/default.png") 4 4, auto;
+}
+
+body:active,
+body:active * {
+  cursor: url("./imgs/cursors/default-click.png") 4 4, auto;
+}
+
+a,
+a *,
+button,
+button *,
+[role="button"],
+[role="button"] *,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.paperButton,
+.paperButton *,
+.hovereffect,
+.hovereffect *,
+.darkbuttoncontainer,
+.darkbuttoncontainer *,
+.darkMode,
+.darkMode *,
+.langSelector,
+.langSelector *,
+.closeBtn,
+.closeBtn *,
+.ham,
+.ham *,
+.draw {
+  cursor: url("./imgs/cursors/pointer.png") 3 5, pointer;
+}
+
+a:active,
+a:active *,
+button:active,
+button:active *,
+[role="button"]:active,
+[role="button"]:active *,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.paperButton:active,
+.paperButton:active *,
+.hovereffect:active,
+.hovereffect:active *,
+.darkbuttoncontainer:active,
+.darkbuttoncontainer:active *,
+.darkMode:active,
+.darkMode:active *,
+.langSelector:active,
+.langSelector:active *,
+.closeBtn:active,
+.closeBtn:active *,
+.ham:active,
+.ham:active *,
+.draw:active {
+  cursor: url("./imgs/cursors/pointer-click.png") 3 5, pointer;
+}
+
+body.darkbackground,
+body.darkbackground * {
+  cursor: url("./imgs/cursors/default-dark.png") 4 4, auto;
+}
+
+body.darkbackground:active,
+body.darkbackground:active * {
+  cursor: url("./imgs/cursors/default-click-dark.png") 4 4, auto;
+}
+
+body.darkbackground a,
+body.darkbackground a *,
+body.darkbackground button,
+body.darkbackground button *,
+body.darkbackground [role="button"],
+body.darkbackground [role="button"] *,
+body.darkbackground input[type="button"],
+body.darkbackground input[type="submit"],
+body.darkbackground input[type="reset"],
+body.darkbackground .paperButton,
+body.darkbackground .paperButton *,
+body.darkbackground .hovereffect,
+body.darkbackground .hovereffect *,
+body.darkbackground .darkbuttoncontainer,
+body.darkbackground .darkbuttoncontainer *,
+body.darkbackground .darkMode,
+body.darkbackground .darkMode *,
+body.darkbackground .langSelector,
+body.darkbackground .langSelector *,
+body.darkbackground .closeBtn,
+body.darkbackground .closeBtn *,
+body.darkbackground .ham,
+body.darkbackground .ham *,
+body.darkbackground .draw {
+  cursor: url("./imgs/cursors/pointer-dark.png") 3 5, pointer;
+}
+
+body.darkbackground a:active,
+body.darkbackground a:active *,
+body.darkbackground button:active,
+body.darkbackground button:active *,
+body.darkbackground [role="button"]:active,
+body.darkbackground [role="button"]:active *,
+body.darkbackground input[type="button"]:active,
+body.darkbackground input[type="submit"]:active,
+body.darkbackground input[type="reset"]:active,
+body.darkbackground .paperButton:active,
+body.darkbackground .paperButton:active *,
+body.darkbackground .hovereffect:active,
+body.darkbackground .hovereffect:active *,
+body.darkbackground .darkbuttoncontainer:active,
+body.darkbackground .darkbuttoncontainer:active *,
+body.darkbackground .darkMode:active,
+body.darkbackground .darkMode:active *,
+body.darkbackground .langSelector:active,
+body.darkbackground .langSelector:active *,
+body.darkbackground .closeBtn:active,
+body.darkbackground .closeBtn:active *,
+body.darkbackground .ham:active,
+body.darkbackground .ham:active *,
+body.darkbackground .draw:active {
+  cursor: url("./imgs/cursors/pointer-click-dark.png") 3 5, pointer;
 }
 
 code {
